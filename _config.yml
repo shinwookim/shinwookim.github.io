@@ -2,10 +2,10 @@ title: Shinwoo Kim
 author: Shinwoo Kim
 email: shinwookim@pitt.edu
 description: >-
-  I am a software developer who is interested in computer architecture, 
-  distributed and operating systems, and compilers.
+  I am a software developer based in Pittsburg PA USA who is interested in 
+  computer architecture, distributed/operating systems, and compilers.
 baseurl: "/~shk148"
-url: "https://sites.pitt.edu"
+url: "https://people.cs.pitt.edu"
 twitter_username: _shinwookim
 github_username: shinwookim
 linkedin_username: kimshinwoo
@@ -26,6 +26,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 nav:
   - title: Home
