@@ -1,0 +1,35 @@
+--- 
+# jekyll requires front matter in main scss file to compile it to css
+--- 
+
+$primary: #a00000;
+
+@import "bootstrap/bootstrap";
+@import "code_highlight";
+
+@media screen and (min-width: 800px){
+  body{
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 1em;
+  }  
+}
+
+
+.nav-link-current {
+  text-decoration: underline !important;
+}
+
+/* Autography Font */
+@font-face {
+  font-family: "autography";
+  font-style: normal;
+  font-weight: normal;
+  src: local("autography"),
+    url("../fonts/autography.woff") format("woff");
+}
+
+.autography {
+  font-family: "autography";
+  font-weight: normal;
+}
