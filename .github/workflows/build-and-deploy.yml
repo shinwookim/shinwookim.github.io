@@ -1,0 +1,63 @@
+on:
+  push:
+    branches: [ 'main' ]
+  pull_request:
+    branches: [ 'main' ]
+  workflow_dispatch:
+
+jobs:
+  
+  build-main:
+    name: Build Main Jekyll Site
+    uses: "./.github/workflows/build-site.yml"
+    with:
+      repository: ${{ github.repository }}
+      artifact_name: main-site
+    secrets: inherit
+  
+  build-teaching:
+    name: Build Teaching Jekyll Site
+    uses: "./.github/workflows/build-site.yml"
+    with:
+      repository: shinwookim/teaching
+      artifact_name: teaching-site
+    secrets: inherit
+
+  merge-sites:
+    name: Merge All Subsites with Main Site
+    runs-on: ubuntu-latest
+    needs: [build-main, build-teaching]
+    steps:
+      - name: Download Artifacts # Download All Artifacts
+        uses: actions/download-artifact@v4
+      - name: Merge Sites
+        run: |
+          mkdir merged-site
+          mkdir merged-site/teaching
+          /bin/cp -rf main-site/* merged-site/
+          /bin/cp -rf teaching-site/* merged-site/teaching/
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: merged-site
+          path: merged-site
+  
+  deploy:
+    name: Deploy Site
+    runs-on: ubuntu-latest
+    needs: [merge-sites]
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: merged-site
+          path: ./merged-site
+      - name: Deploy Site to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./merged-site
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
