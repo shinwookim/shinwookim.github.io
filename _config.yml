@@ -10,9 +10,6 @@ twitter_username: _shinwookim
 github_username: shinwookim
 linkedin_username: kimshinwoo
 
-plugins:
-  - jekyll-feed
-
 include:
   - _pages
 
@@ -25,3 +22,7 @@ markdown: kramdown
 kramdown:
   highlighter: rouge
   input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
