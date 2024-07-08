@@ -26,3 +26,13 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+nav:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: Teaching
+    url: /teaching/
+  - title: Contact
+    url: /contact/
