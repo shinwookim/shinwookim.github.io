@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include styles.html %}
+    {% seo %}
+</head>
+
+<body>
+    {% include darkmode_toggle.html %}
+    {% include header.html %}
+    {% include navbar.html %}
+
+    {{ content }}
+    {% include footer.html %}
+    {% include scripts.html %}
+</body>
+
+</html>

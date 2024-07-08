@@ -1,0 +1,31 @@
+<header class="row">
+    <div class="col-sm">
+        <img class="rounded w-100" src="{{ '/assets/img/hero-bg.webp' | prepend: site.baseurl}}" />
+    </div>
+    <div class="col-sm">
+        <div>
+            <span class="h4 fw-bolder">{{ site.title }}</span>
+        </div>
+        <p>
+            Graduate Student<br />
+            Department of Computer Science<br />
+            School of Computing and Information<br />
+            University of Pittsburgh
+        </p>
+        <p>
+            <a class="text-decoration-none" href="mailto:{{ site.email }}">{{ site.email }}</a>
+            <br />
+            <a class="text-decoration-none" href="https://twitter.com/{{ site.twitter_username }}">
+                <i class="fa-brands fa-x-twitter"></i> {{ site.twitter_username }}
+            </a>
+            <br />
+            <a class="text-decoration-none" href="https://github.com/{{ site.github_username }}">
+                <i class="fa-brands fa-github"></i> {{ site.github_username }}
+            </a>
+            <br />
+            <a class="text-decoration-none" href="https://linkedin.com/in/{{ site.linkedin_username }}">
+                <i class="fa-brands fa-linkedin-in"></i> {{ site.linkedin_username }}
+            </a>
+        </p>
+    </div>
+</header>
