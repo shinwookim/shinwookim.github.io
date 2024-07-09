@@ -1,2 +1,5 @@
 <script src="{{ '/assets/js/darkmode_toggle.js' | prepend: site.baseurl }}"></script>
 <script src="https://kit.fontawesome.com/ad13315ac8.js" crossorigin="anonymous"></script>
+{% if site.google_analytics and jekyll.environment == 'production' %}
+{% include analytics.html %}
+{% endif %}
