@@ -27,7 +27,7 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
       - name: Build Site
-        run: bundle exec jekyll build
+        run: JEKYLL_ENV=production bundle exec jekyll build
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
