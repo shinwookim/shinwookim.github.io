@@ -10,9 +10,6 @@ twitter_username: _shinwookim
 github_username: shinwookim
 linkedin_username: kimshinwoo
 
-include:
-  - _pages
-
 collections:
   pages:
     output: true
