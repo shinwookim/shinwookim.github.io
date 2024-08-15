@@ -1,3 +1,4 @@
+name: Build & Deploy Complete Site
 on:
   push:
     branches: [ 'main' ]
@@ -6,7 +7,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  
   build-main:
     name: Build Main Jekyll Site
     uses: "./.github/workflows/build-site.yml"
