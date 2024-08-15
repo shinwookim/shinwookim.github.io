@@ -36,3 +36,5 @@ nav:
     url: /contact/
 
 google_analytics: G-X43BZS6F4C
+
+include: ['.lycheeignore']
