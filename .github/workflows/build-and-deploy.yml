@@ -2,8 +2,6 @@ name: Build & Deploy Complete Site
 on:
   push:
     branches: [ 'main' ]
-  pull_request:
-    branches: [ 'main' ]
   workflow_dispatch:
 
 jobs:
@@ -15,7 +13,6 @@ jobs:
       artifact_name: main-site
       require_npm: true
     secrets: inherit
-  
   build-teaching:
     name: Build Teaching Jekyll Site
     uses: "./.github/workflows/build-site.yml"
@@ -23,7 +20,6 @@ jobs:
       repository: shinwookim/teaching
       artifact_name: teaching-site
     secrets: inherit
-
   merge-sites:
     name: Merge All Subsites with Main Site
     runs-on: ubuntu-latest
