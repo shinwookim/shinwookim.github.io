@@ -16,16 +16,27 @@ on:
         description: 'Artifact name'
         required: true
         type: string
+      checkout_with_token:
+        description: 'Checkout with token'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - if: ${{ inputs.checkout_with_token == true }}
+        name: Checkout Repository
         uses: actions/checkout@v4
         with:
           repository: ${{ inputs.repository }}
           token: ${{ secrets.PAT }}
+      - if: ${{ inputs.checkout_with_token == false }}
+        name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository }}
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -37,7 +48,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - if: ${{ inputs.require_npm }}
+      - if: ${{ inputs.require_npm == true }}
         name: Install Node Dependencies
         run: npm install
       - run: ls
