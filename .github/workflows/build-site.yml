@@ -3,6 +3,11 @@ name: Build Jekyll Site
 on:
   workflow_call:
     inputs:
+      require_npm:
+        description: 'Require NPM'
+        required: false
+        default: false
+        type: boolean
       repository: 
         description: 'Repository name'
         required: true
@@ -26,6 +31,16 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
+      - if: ${{ inputs.require_npm }}
+        name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - if: ${{ inputs.require_npm }}
+        name: Install Node Dependencies
+        run: npm install
+      - run: ls
       - name: Build Site
         run: JEKYLL_ENV=production bundle exec jekyll build
       - name: Upload artifact
