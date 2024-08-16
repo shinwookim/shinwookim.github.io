@@ -13,6 +13,7 @@ jobs:
     with:
       repository: ${{ github.repository }}
       artifact_name: site
+      require_npm: true
     secrets: inherit
   check-links:
     name: Check for Broken Links
