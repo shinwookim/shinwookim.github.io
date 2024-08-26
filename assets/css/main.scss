@@ -7,7 +7,7 @@ $primary: #a00000;
 @import "bootstrap";
 @import "code_highlight";
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1140px){
   body{
     max-width: 50vw;
     margin: 0 auto;
@@ -15,6 +15,13 @@ $primary: #a00000;
   }  
 }
 
+@media screen and (min-width: 960px) and (max-width: 1140px){
+  body{
+    max-width: 75vw;
+    margin: 0 auto;
+    padding: 1em;
+  }  
+}
 
 .nav-link-current {
   text-decoration: underline !important;
@@ -32,4 +39,15 @@ $primary: #a00000;
 .autography {
   font-family: "autography";
   font-weight: normal;
+}
+
+.headshot {
+  @extend .rounded;
+  @extend .w-75; 
+}
+@media screen and (min-width: 540px){
+  .headshot
+    {
+      float: right;
+    }
 }
