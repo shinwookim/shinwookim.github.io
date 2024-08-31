@@ -4,8 +4,12 @@ title: Teaching
 ---
 
 # Teaching
+## Current Courses
 
-I'm no longer involved with teaching at the University of Pittsburgh as of Fall 2024. 
+|            Semester            | Course                                                                  |  Role  |
+| :----------------------------: | ----------------------------------------------------------------------- | :----: |
+| **Fall 2024**<br />(Term 2251) | <i class="pitt-icon"></i> **CS 0449**, Introduction to Systems Software | Grader |
+{: .table .table-striped .border}
 
 ## Past Courses
 
