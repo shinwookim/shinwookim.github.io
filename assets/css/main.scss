@@ -56,3 +56,7 @@ $primary: #a00000;
     float: right;
   }
 }
+
+.ratio-letter {
+  --bs-aspect-ratio: calc(110 / 85 * 100%);
+}

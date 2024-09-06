@@ -35,6 +35,8 @@ nav:
     url: /projects/
   - title: Teaching
     url: /teaching/
+  - title: Résumé
+    url: /resume/
   - title: Contact
     url: /contact/
 
