@@ -27,6 +27,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-purgecss
 
 nav:
   - title: Home
@@ -43,3 +44,5 @@ nav:
 google_analytics: G-X43BZS6F4C
 
 include: [".lycheeignore"]
+
+css_dir: "assets/css"
