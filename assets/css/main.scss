@@ -1,9 +1,8 @@
 --- 
-# jekyll requires front matter in main scss file to compile it to css
---- 
-$primary: #a00000;
 
-@import "bootstrap";
+--- 
+
+@import "boostrap_custom";
 @import "code_highlight";
 
 @media screen and (min-width: 1140px) {
