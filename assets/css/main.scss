@@ -1,13 +1,12 @@
---- 
-
---- 
+---
+---
 
 @import "boostrap_custom";
 @import "code_highlight";
 
 @media screen and (min-width: 1140px) {
   body {
-    max-width: 50vw;
+    max-width: 45vw;
     margin: 0 auto;
     padding: 1em;
   }
@@ -30,8 +29,7 @@
   font-family: "autography";
   font-style: normal;
   font-weight: normal;
-  src: local("autography"),
-    url("../fonts/autography.woff") format("woff");
+  src: local("autography"), url("../fonts/autography.woff") format("woff");
 }
 
 .autography {
@@ -45,7 +43,7 @@
 
 @media screen and (max-width: 540px) {
   .headshot {
-    width: 100%;
+    width: 45%;
   }
 }
 
@@ -58,4 +56,15 @@
 
 .ratio-letter {
   --bs-aspect-ratio: calc(110 / 85 * 100%);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0 1em;
+  border-left: 0.25em solid;
+}
+
+a {
+  @extend .link-underline-opacity-25;
+  @extend .link-underline-opacity-100-hover;
 }

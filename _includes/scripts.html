@@ -1,28 +1,34 @@
-<script src="{{ '/assets/js/darkmode_toggle.js' | prepend: site.baseurl }}"></script>
+<script src="{% link /assets/js/darkmode_toggle.js %}"></script>
 <script src="https://kit.fontawesome.com/ad13315ac8.js" crossorigin="anonymous"></script>
+
 {% if site.google_analytics and jekyll.environment == 'production' %}
 {% include analytics.html %}
 {% endif %}
 
 {% if page.include contains "resume" %}
 <script>
-    const release_url = "https://api.github.com/repos/shinwookim/resume/releases/latest"
-    fetch(release_url)
-        .then(response => response.json()) // Parse JSON response data
-        .then(data => {
-            fetch(data['assets_url'])
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('resume-pdf').innerHTML = `<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=${data[0]['browser_download_url']}" width="500" height="375">`
-                })
-                .catch(error => {
-                    console.error(error); // Handle any errors
-                });
-            const last_modified = new Date(data['published_at']);
-            document.getElementById('resume-last-updated').innerHTML = `<a href='https://github.com/shinwookim/resume/releases/latest'>${last_modified.toDateString()}</a >`
+  const release_url =
+    "https://api.github.com/repos/shinwookim/resume/releases/latest";
+  fetch(release_url)
+    .then((response) => response.json()) // Parse JSON response data
+    .then((data) => {
+      fetch(data["assets_url"])
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById(
+            "resume-pdf"
+          ).innerHTML = `<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=${data[0]["browser_download_url"]}" width="500" height="375">`;
         })
-        .catch(error => {
-            console.error(error); // Handle any errors
+        .catch((error) => {
+          console.error(error); // Handle any errors
         });
+      const last_modified = new Date(data["published_at"]);
+      document.getElementById(
+        "resume-last-updated"
+      ).innerHTML = `<a href='https://github.com/shinwookim/resume/releases/latest'>${last_modified.toDateString()}</a >`;
+    })
+    .catch((error) => {
+      console.error(error); // Handle any errors
+    });
 </script>
 {% endif %}
