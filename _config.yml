@@ -28,6 +28,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-purgecss
+  - jekyll-spaceship
 
 nav:
   - title: Home
