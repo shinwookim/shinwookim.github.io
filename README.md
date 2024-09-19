@@ -19,3 +19,50 @@ During my time at Pitt, I engaged in innovative research and non-research [proje
 ## Education
 - (Exp.) 2024, Master of Computer Science, University of Pittsburgh
 - 2023, Bachelor of Computer Science, University of Pittsburgh
+
+## Projects
+
+### 2024
+- [NBAPositionify: Leveraging Data Mining Techniques to Classify Professional Basketball Players into Positions](https://github.com/shinwookim/NBAPositionify)
+- Research on "*Optimizing Speculative Decoding in Large Language Models*"
+- PittRCDB: Columnar Database with Support for Row-Column Memory Buffers, Concurrent Transactions, and Crash Tolerance 
+
+### 2023
+- [GRASP-HPO: Hyperparameter Optimization using GRASP-Based Techniques](https://github.com/shinwookim/GRASP-HPO)
+
+### 2022
+- Which Paint is the Best?: Utilizing Machine Learning to Analyze Paint Colors for PPG Industries
+- [TouchTheInvisible: Bridging Physical and Digital Modeling of Biological Macromolecules](https://www.touchtheinvisible.com/)
+
+### 2021
+- [Pittsburgh's Best Neighborhood: Using Data To Determine The Best Neighborhood in Pittsburgh](https://github.com/shinwookim/PGH-Best-Neighborhood)
+
+## Teaching
+
+### Current Courses
+
+|   Semester    | Course                                                                                                    |  Role  |
+| :-----------: | --------------------------------------------------------------------------------------------------------- | :----: |
+| **Fall 2024** | **CS 0449**, Introduction to Systems Software                                                             | Grader |
+| ^^(Term 2251) | ^^ [*Office hours by appointment only (including project check-offs)*]({% link _pages/meet-with-me.md %}) |   ^^   |
+{: .table .table-sm .border .border-secondary}
+
+### Past Courses
+
+|    Semester     | Course                                                                    |           Role            |
+| :-------------: | ------------------------------------------------------------------------- | :-----------------------: |
+| **Spring 2024** | **CS 0449**, Introduction to Systems Software                             |          Grader           |
+|  ^^(Term 2243)  | ^^                                                                        |            ^^             |
+|  **Fall 2023**  | [**CS 0449**, Introduction to Systems Software](./CS0449-2241/)           |       Recitation TA       |
+|  ^^(Term 2241)  | ^^                                                                        |            ^^             |
+| **Spring 2023** | [**CS 0449**, Introduction to Systems Software](./CS0449-2234/) &         |       Recitation TA       |
+|  ^^(Term 2234)  | ^^[**CS 0441**, Discrete Structures for Computer Science](./CS0441-2234/) |      ^^Recitation TA      |
+|  **Fall 2022**  | [**CS 0441**, Discrete Structures for Computer Science](./CS0441-2231/)   |       Recitation TA       |
+|  ^^(Term 2231)  | ^^                                                                        |            ^^             |
+|  **Fall 2021**  | [**Bridges to IT**: Jump-Starting a Career in IT](bridges-to-it.html)     |  Primary/Lead Instructor  |
+|  ^^(Term 2211)  | ^^CEC STEAM Saturday Courses                                              | ^^Primary/Lead Instructor |
+{: .table .table-sm .border .border-secondary}
+
+<style>
+h2 {margin-top: 2em;}
+</style>

@@ -34,9 +34,9 @@ nav:
   - title: Home
     url: /
   - title: Projects
-    url: /projects/
+    url: /#projects
   - title: Teaching
-    url: /teaching/
+    url: /#teaching
   - title: Résumé
     url: /resume/
   - title: Contact
