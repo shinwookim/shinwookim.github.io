@@ -9,7 +9,7 @@ During my time at Pitt, I engaged in innovative research and non-research [proje
 
 ## Experience
 - 2023-*present*, Graduate Student, University of Pittsburgh
-- 2024, Software Engineering Intern, Ansys Inc. (Digital Twins)
+- 2024, Software Engineering Intern, [Ansys Inc. (Digital Twin)](https://www.ansys.com/products/digital-twin)
 - 2021-2024, Part-Time Instructor/Teaching Assistant, University of Pittsburgh
 - 2021-2022, Diversity Recruitment Educator/Mentor, University of Pittsburgh
 - 2021-2022, STEM Ambassador Fellow, University of Pittsburgh

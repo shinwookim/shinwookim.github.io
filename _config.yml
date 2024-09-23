@@ -45,5 +45,6 @@ nav:
 google_analytics: G-X43BZS6F4C
 
 include: [".lycheeignore"]
+exclude: ["README.md"]
 
 css_dir: "assets/css"
