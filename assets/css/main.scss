@@ -6,7 +6,7 @@
 
 @media screen and (min-width: 1400px) {
   body {
-    max-width: 55vw;
+    max-width: 800px;
     margin: 0 auto;
     padding: 1em;
   }
@@ -39,6 +39,7 @@
 
 .headshot {
   @extend .rounded;
+  @extend .img-fluid;
 }
 
 @media screen and (max-width: 540px) {
@@ -49,7 +50,7 @@
 
 @media screen and (min-width: 540px) {
   .headshot {
-    width: 75%;
+    max-height: 240px;
     float: right;
   }
 }
