@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Meet with Me
+include: ['bs-tooltip', 'cal-cs449']
 ---
 
 # Schedule a Meeting with Shinwoo
@@ -36,15 +37,16 @@ After about ten or so minutes, you'll be told that you either *passed* or *faile
 
 ### Project Check-off Schedule
 
-|                    Project # |        Check-off Begins        |         Check-off Ends         |
-| ---------------------------: | :----------------------------: | :----------------------------: |
-| **1** {: .bg-warning-subtle} | **TBA** {: .bg-warning-subtle} | **TBA** {: .bg-warning-subtle} |
-|                        **2** |              TBA               |              TBA               |
-|                        **3** |              TBA               |              TBA               |
-|                        **4** |              TBA               |              TBA               |
+|       Project #       | Check-off Begins | Check-off Ends |
+| :-------------------: | :--------------: | :------------: |
+| **P1. Steganography** |  **2024-10-16**  | **2024-10-XX** |
+|           2           |                  |                |
+|           3           |                  |                |
+|           4           |                  |                |
 {: .table .table-light .table-hover .border .border-dark .w-auto .mx-auto}
 
-
-[**Click Here to Schedule Check-off**](https://cal.com/shinwookim/cs0449){: .btn .btn-info target="_blank" #scheduler}
-{: .mx-auto .text-center}
+<div class="mx-auto text-center">
+    <btn class="strong btn btn-info text-dark" data-cal-link="shinwookim/cs0449" data-cal-namespace="cs0449" data-cal-config='{"layout":"month_view"}'>
+        Click Here to Schedule Check-off
+    </btn>
 </div>
