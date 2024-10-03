@@ -28,7 +28,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-purgecss
   - jekyll-spaceship
 
 nav:
@@ -47,5 +46,3 @@ google_analytics: G-X43BZS6F4C
 
 include: [".lycheeignore"]
 exclude: ["README.md"]
-
-css_dir: "assets/css"
