@@ -1,41 +1,60 @@
 <header class="row">
-    <div class="col-sm mb-sm-0">
-        <img class="headshot" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+  <div class="col-sm mb-sm-0">
+    <img
+      class="headshot"
+      sizes="(max-width: 1400px) 100vw, 1400px"
+      srcset="
                 {{'/assets/img/profile-picture/profile,w_200.webp 200w' | prepend: site.baseurl }},
                 {{'/assets/img/profile-picture/profile,w_868.webp 868w' | prepend: site.baseurl }},
                 {{'/assets/img/profile-picture/profile,w_1376.webp 1376w' | prepend: site.baseurl }},
                 {{'/assets/img/profile-picture/profile,w_1400.webp 1400w' | prepend: site.baseurl }}"
-            src="{{'/assets/img/profile-picture/profile,w_1400.webp 1400w' | prepend: site.baseurl }}"
-            alt="Portrait of Shinwoo">
+      src="{{'/assets/img/profile-picture/profile,w_1400.webp 1400w' | prepend: site.baseurl }}"
+      alt="Portrait of Shinwoo"
+    />
+  </div>
+  <div class="col-sm">
+    <div>
+      <span class="h4 fw-bolder">{{ site.title }}</span>
     </div>
-    <div class="col-sm">
-        <div>
-            <span class="h4 fw-bolder">{{ site.title }}</span>
-        </div>
-        <p>
-            Graduate Student<br />
-            Department of Computer Science<br />
-            School of Computing and Information<br />
-            University of Pittsburgh
-        </p>
-        <p>
-            <a class="text-decoration-none" href="mailto:{{ site.email }}"><code>{{ site.email }}</code></a>
-            <br />
-            <a class="text-decoration-none" href="https://twitter.com/{{ site.twitter_username }}">
-                <i class="fa-brands fa-x-twitter"></i> <code>{{ site.twitter_username }}</code>
-            </a>
-            <br />
-            <a class="text-decoration-none" href="https://github.com/{{ site.github_username }}">
-                <i class="fa-brands fa-github"></i> <code>{{ site.github_username }}</code>
-            </a>
-            <br />
-            <a class="text-decoration-none" href="https://linkedin.com/in/{{ site.linkedin_username }}">
-                <i class="fa-brands fa-linkedin-in"></i> <code>{{ site.linkedin_username }}</code>
-            </a>
-            <br />
-            <a class="text-decoration-none" href="https://keybase.io/{{ site.keybase_username }}">
-                <i class="fa-brands fa-keybase"></i> <code>{{ site.keybase_username }}</code>
-            </a>
-        </p>
-    </div>
+    <p>
+      Graduate Student<br />
+      Department of Computer Science<br />
+      School of Computing and Information<br />
+      University of Pittsburgh
+    </p>
+    <p>
+      <a class="text-decoration-none" href="mailto:{{ site.email }}">
+        <i class="fa-solid me-1 fa-envelope"></i> {{ site.email }}
+      </a>
+      <br />
+      <a
+        href="https://twitter.com/{{ site.twitter_username }}"
+        class="text-decoration-none"
+      >
+        <i class="fa-brands me-1 fa-x-twitter"></i> {{ site.twitter_username }}
+      </a>
+      <br />
+      <a
+        href="https://github.com/{{ site.github_username }}"
+        class="text-decoration-none"
+      >
+        <i class="fa-brands me-1 fa-github"></i> {{ site.github_username }}
+      </a>
+      <br />
+      <a
+        href="https://linkedin.com/in/{{ site.linkedin_username }}"
+        class="text-decoration-none"
+      >
+        <i class="fa-brands me-1 fa-linkedin-in"></i> {{ site.linkedin_username
+        }}
+      </a>
+      <br />
+      <a
+        href="https://keybase.io/{{ site.keybase_username }}"
+        class="text-decoration-none"
+      >
+        <i class="fa-brands me-1 fa-keybase"></i> {{ site.keybase_username }}
+      </a>
+    </p>
+  </div>
 </header>
