@@ -39,7 +39,7 @@ After about ten or so minutes, you'll be told that you either *passed* or *faile
 
 |       Project #       | Check-off Begins | Check-off Ends |
 | :-------------------: | :--------------: | :------------: |
-| **P1. Steganography** |  **2024-10-16**  | **2024-10-XX** |
+| **P1. Steganography** |  **2024-10-16**  | **2024-11-01** |
 |           2           |                  |                |
 |           3           |                  |                |
 |           4           |                  |                |
