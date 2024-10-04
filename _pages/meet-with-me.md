@@ -35,6 +35,8 @@ Once at my office, I'll ask you some questions about your submission and the pro
 
 After about ten or so minutes, you'll be told that you either *passed* or *failed*. If you passed, congrats! There's nothing more that you need to do. If you failed, you get one more chance for a check-off redo with Luis. Please wait while I document why you failed; afterward, I'll give you instructions on how to schedule a check-off redo with Luis.
 
+**You may not re-submit your assignment on GradeScope *after* the check-off meeting**.
+
 ### Project Check-off Schedule
 
 |       Project #       | Check-off Begins | Check-off Ends |
