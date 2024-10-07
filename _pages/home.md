@@ -46,21 +46,3 @@ During my time at Pitt, I engaged in innovative research and non-research [proje
 {: .h5}
 
 - [Pittsburgh's Best Neighborhood: Using Data To Determine The Best Neighborhood in Pittsburgh](https://github.com/shinwookim/PGH-Best-Neighborhood)
-
-## Teaching
-
-|               Semester               | Course                                                                                                    | Role                          |
-| :----------------------------------: | --------------------------------------------------------------------------------------------------------- | :---------------------------- |
-| **Fall 2024** {: .bg-body-secondary} | **CS 0449**, Introduction to Systems Software {: .bg-body-secondary}                                      | Grader {: .bg-body-secondary} |
-|            ^^(Term 2251)             | ^^ [*Office hours by appointment only (including project check-offs)*]({% link _pages/meet-with-me.md %}) | ^^                            |
-|           **Spring 2024**            | **CS 0449**, Introduction to Systems Software                                                             | Grader                        |
-|            ^^(Term 2243)             | ^^                                                                                                        | ^^                            |
-|            **Fall 2023**             | [**CS 0449**, Introduction to Systems Software](./teaching/CS0449-2241/)                                  | Recitation TA                 |
-|            ^^(Term 2241)             | ^^                                                                                                        | ^^                            |
-|           **Spring 2023**            | [**CS 0449**, Introduction to Systems Software](./teaching/CS0449-2234/) &                                | Recitation TA                 |
-|            ^^(Term 2234)             | ^^[**CS 0441**, Discrete Structures for Computer Science](./teaching/CS0441-2234/)                        | ^^                            |
-|            **Fall 2022**             | [**CS 0441**, Discrete Structures for Computer Science](./teaching/CS0441-2231/)                          | Recitation TA                 |
-|            ^^(Term 2231)             | ^^                                                                                                        | ^^                            |
-|            **Fall 2021**             | [**Bridges to IT**: Jump-Starting a Career in IT](./teaching/bridges-to-it.html) &                        | Primary Instructor            |
-|            ^^(Term 2211)             | ^^**CEC STEAM Saturday** Courses                                                                          | ^^                            |
-{: .table .table-sm .border .border-secondary}
