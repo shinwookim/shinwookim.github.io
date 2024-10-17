@@ -22,6 +22,10 @@ Next, click the [link at the bottom of this page](#scheduler), to go to my sched
 > *You have approximately two weeks from the project deadline to complete your project check-off. I recommend completing the check-off as early as possible since it can get pretty crowded toward the check-off end date. Plus, it gives you adequate time to prepare for a check-off redo with Luis if you fail (see below).*
 
 ### During the check-off meeting
+
+Check-off meeting no-shows result in an immediate check-off fail!
+{: .text-center .blink .text-danger}
+
 Check-off meetings are **held in person**. That means you'll have to come meet me in my office (**6510 SENSQ**). 
 
 [![Map to my office at Sennott Square]({% link /assets/img/office-location.jpg %}){: .float-md-end .col-9 .col-md-4}]({% link /assets/img/office-location.jpg %})
@@ -39,12 +43,12 @@ After about ten or so minutes, you'll be told that you either *passed* or *faile
 
 ### Project Check-off Schedule
 
-|       Project #       | Check-off Begins | Check-off Ends |
-| :-------------------: | :--------------: | :------------: |
-| **P1. Steganography** |  **2024-10-16**  | **2024-11-01** |
-|           2           |                  |                |
-|           3           |                  |                |
-|           4           |                  |                |
+| Project                          | Check-off Begins | Check-off Ends |
+| :------------------------------- | :--------------: | :------------: |
+| **P1. BMP Steganography**        |  **2024-10-16**  | **2024-11-01** |
+| **P2. Dynamic Memory Allocator** |                  |                |
+|                                  |                  |                |
+|                                  |                  |                |
 {: .table .table-light .table-hover .border .border-dark .w-auto .mx-auto}
 
 <div class="mx-auto text-center">
