@@ -3,9 +3,12 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="preload" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}"></noscript>
+
+    <link rel="preload" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
+    </noscript>
 
     {% seo %}
     <meta name="google-site-verification" content="e1xnIMrmu01RD3c5tiz0v75hhIJQZciraWGrtxtUYhc" />
@@ -15,7 +18,6 @@
     {% include darkmode_toggle.html %}
     {% include header.html %}
     {% include navbar.html %}
-
     {{ content }}
     {% include footer.html %}
     {% include scripts.html %}

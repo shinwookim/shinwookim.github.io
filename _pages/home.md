@@ -3,19 +3,19 @@ title: Home
 layout: page
 permalink: /
 ---
-I'm a graduate student studying computer science in the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I also earned my Bachelor's degree. My current interests lie in the field of **computer systems, operating systems, and computer architecture**, although there are very few things in computer science that I'm *not* interested in. 
+
+I'm a graduate student studying computer science in the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I also earned my Bachelor's degree. My current interests lie in the field of **computer systems, operating systems, and computer architecture**, although there are very few things in computer science that I'm _not_ interested in.
 
 During my time at Pitt, I engaged in innovative research and non-research [projects](./projects/), [taught](./teaching/) exceptional students, and advocated for equity and inclusion in STEM education, among other endeavors. Upon graduation, I aim to leverage my expertise in industry to effect meaningful change in the world.
 
 ## Experience
 
-- 2023-*present*, Graduate Student, University of Pittsburgh
+- 2023-_present_, Graduate Student, University of Pittsburgh
 - 2024, Software Engineering Intern, [Ansys Inc. (Digital Twin)](https://www.ansys.com/products/digital-twin)
 - 2021-2024, Part-Time Instructor/Teaching Assistant, University of Pittsburgh
 - 2021-2022, Diversity Recruitment Educator/Mentor, University of Pittsburgh
 - 2021-2022, STEM Ambassador Fellow, University of Pittsburgh
 - 2021-2023, Undergraduate Student, University of Pittsburgh
-
 
 ## Education
 
@@ -28,8 +28,8 @@ During my time at Pitt, I engaged in innovative research and non-research [proje
 {: .h5}
 
 - [NBAPositionify: Leveraging Data Mining Techniques to Classify Professional Basketball Players into Positions](https://github.com/shinwookim/NBAPositionify)
-- Research on "*Optimizing Speculative Decoding in Large Language Models*"
-- PittRCDB: Columnar Database with Support for Row-Column Memory Buffers, Concurrent Transactions, and Crash Tolerance 
+- Research on "_Optimizing Speculative Decoding in Large Language Models_"
+- PittRCDB: Columnar Database with Support for Row-Column Memory Buffers, Concurrent Transactions, and Crash Tolerance
 
 ### 2023
 {: .h5}

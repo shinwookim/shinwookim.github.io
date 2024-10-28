@@ -1,12 +1,10 @@
-<div class="text-center">
-  <hr class="border border-secondary opacity-100 mb-2" />
-    {% for link in site.nav %}
-    <a class="text-decoration-none {% if page.url == link.url %}nav-link-current{% endif -%}"
-        href="{{ link.url | prepend: site.baseurl }}">
-        {{ link.title }}</a>
-    {%- unless forloop.last -%}
-    <span> | </span>
-    {%- endunless -%}
-    {% endfor %}
-    <hr class="border border-secondary opacity-100 mt-2" />
-</div>
+<nav class="text-center border-top border-1 border-bottom border-secondary opacity-100 p-2 my-2">
+  {%- for link in site.nav %}
+  <a class="text-decoration-none {%if page.url == link.url %}nav-link-current{% endif -%}"
+    href="{{ link.url | prepend: site.baseurl }}">
+    {{ link.title }}</a>
+  {%- unless forloop.last -%}
+  <span> | </span>
+  {%- endunless -%}
+  {% endfor -%}
+</nav>

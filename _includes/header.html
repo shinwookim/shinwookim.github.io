@@ -1,7 +1,6 @@
 <header class="row">
   <div class="col-sm mb-sm-0">
-    <img
-      srcset="
+    <img srcset="
         {{ '/assets/img/profile-picture/profile-50w.avif 50w' | prepend:site.baseurl }},
         {{ '/assets/img/profile-picture/profile-150w.avif 150w' | prepend:site.baseurl }},
         {{ '/assets/img/profile-picture/profile-200w.avif 200w' | prepend:site.baseurl }},
@@ -11,26 +10,23 @@
         {{ '/assets/img/profile-picture/profile-500w.avif 500w' | prepend:site.baseurl }},
         {{ '/assets/img/profile-picture/profile-800w.avif 800w' | prepend:site.baseurl }},
         {{ '/assets/img/profile-picture/profile,original.webp 1200w' | prepend: site.baseurl }}"
-      sizes="
+      src="{{'/assets/img/profile-picture/profile,original.webp' | prepend: site.baseurl }}" class="headshot"
+      loading="lazy" decoding="async" sizes="
         (max-width: 50px) 50px,
         (max-width: 150px) 150px,
         (max-width: 200px) 200px,
         (max-width: 300px) 300px,
-        (max-width: 350px) 350px
+        (max-width: 350px) 350px,
         (max-width: 400px) 400px,
         (max-width: 500px) 500px,
         (max-width: 1200px) 800px,
         (max-width: 1201px) 1200px"
       src="{{'/assets/img/profile-picture/profile,original.webp' | prepend: site.baseurl }}"
-      alt="Portrait of Shinwoo Kim"
-      class="headshot"
-      loading="lazy"
-      decoding="async"
-    />
+      alt="Portrait of Shinwoo Kim" />
   </div>
-  <div class="col-sm">
+  <div class="col-sm py-2">
     <div>
-      <span class="h4 fw-bolder">{{ site.title }}</span>
+      <span class="h1 fw-bolder">{{ site.title }}</span>
     </div>
     <p>
       Graduate Student<br />
@@ -43,32 +39,20 @@
         <i class="fa-solid me-1 fa-envelope"></i> {{ site.email }}
       </a>
       <br />
-      <a
-        href="https://twitter.com/{{ site.twitter_username }}"
-        class="text-decoration-none"
-      >
+      <a href="https://twitter.com/{{ site.twitter_username }}" class="text-decoration-none">
         <i class="fa-brands me-1 fa-x-twitter"></i> {{ site.twitter_username }}
       </a>
       <br />
-      <a
-        href="https://github.com/{{ site.github_username }}"
-        class="text-decoration-none"
-      >
+      <a href="https://github.com/{{ site.github_username }}" class="text-decoration-none">
         <i class="fa-brands me-1 fa-github"></i> {{ site.github_username }}
       </a>
       <br />
-      <a
-        href="https://linkedin.com/in/{{ site.linkedin_username }}"
-        class="text-decoration-none"
-      >
+      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="text-decoration-none">
         <i class="fa-brands me-1 fa-linkedin-in"></i> {{ site.linkedin_username
         }}
       </a>
       <br />
-      <a
-        href="https://keybase.io/{{ site.keybase_username }}"
-        class="text-decoration-none"
-      >
+      <a href="https://keybase.io/{{ site.keybase_username }}" class="text-decoration-none">
         <i class="fa-brands me-1 fa-keybase"></i> {{ site.keybase_username }}
       </a>
     </p>

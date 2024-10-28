@@ -98,3 +98,9 @@ html {
 animation:fade 1000ms infinite;
 -webkit-animation:fade 1000ms infinite;
 }
+
+.table-sm {
+  td, th {
+    padding: 0.25em 1em !important;
+  } 
+}
