@@ -4,7 +4,7 @@ layout: page
 permalink: /
 ---
 
-I'm a graduate student studying computer science in the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I also earned my Bachelor's degree. My current interests lie in the field of **computer systems, operating systems, and computer architecture**, although there are very few things in computer science that I'm _not_ interested in.
+I am a graduate student studying computer science in the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I also earned my Bachelor's degree. My current interests lie in the field of **computer systems, operating systems, and computer architecture**, although there are very few things in computer science that I'm _not_ interested in.
 
 During my time at Pitt, I engaged in innovative research and non-research [projects](./projects/), [taught](./teaching/) exceptional students, and advocated for equity and inclusion in STEM education, among other endeavors. Upon graduation, I aim to leverage my expertise in industry to effect meaningful change in the world.
 

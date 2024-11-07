@@ -35,25 +35,26 @@
       University of Pittsburgh
     </p>
     <p>
-      <a class="text-decoration-none" href="mailto:{{ site.email }}">
+      <a href="mailto:{{ site.email }}" class="text-decoration-none">
         <i class="fa-solid me-1 fa-envelope"></i> {{ site.email }}
       </a>
       <br />
-      <a href="https://twitter.com/{{ site.twitter_username }}" class="text-decoration-none">
-        <i class="fa-brands me-1 fa-x-twitter"></i> {{ site.twitter_username }}
+      <a href="https://{{ site.mastodon.instance }}/@{{ site.mastodon.username }}" class="text-decoration-none">
+        <i class="fa-brands me-1 fa-mastodon"></i> {{ site.mastodon.username }}@{{ site.mastodon.instance }}
       </a>
       <br />
+      <a href="https://keybase.io/{{ site.keybase_username }}" class="text-decoration-none">
+        <i class="fa-brands me-1 fa-keybase"></i> {{ site.keybase_username }} &nbsp;
+      </a>
       <a href="https://github.com/{{ site.github_username }}" class="text-decoration-none">
         <i class="fa-brands me-1 fa-github"></i> {{ site.github_username }}
       </a>
       <br />
       <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="text-decoration-none">
-        <i class="fa-brands me-1 fa-linkedin-in"></i> {{ site.linkedin_username
-        }}
+        <i class="fa-brands me-1 fa-linkedin-in"></i> {{ site.linkedin_username }} &nbsp;
       </a>
-      <br />
-      <a href="https://keybase.io/{{ site.keybase_username }}" class="text-decoration-none">
-        <i class="fa-brands me-1 fa-keybase"></i> {{ site.keybase_username }}
+      <a href="https://twitter.com/{{ site.twitter_username }}" class="text-decoration-none">
+        <i class="fa-brands me-1 fa-x-twitter"></i> {{ site.twitter_username }}
       </a>
     </p>
   </div>

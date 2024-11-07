@@ -11,6 +11,10 @@ github_username: shinwookim
 linkedin_username: kimshinwoo
 keybase_username: shinwookim
 
+mastodon:
+  username: shinwoo
+  instance: discuss.systems
+
 collections:
   pages:
     output: true
