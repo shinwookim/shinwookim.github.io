@@ -1,9 +1,10 @@
 ---
 layout: default
+header_style: minimal
 ---
 
 <main class="mb-4 p-3 bg-secondary-subtle rounded-3">
-  {% for tag in page.tags %}
-  <span class="badge text-bg-info">{{tag}}</span>
-  {% endfor %} {{ content }}
+    {% for tag in page.tags %}
+    <span class="badge text-bg-info">{{tag}}</span>
+    {% endfor %} {{ content }}
 </main>
