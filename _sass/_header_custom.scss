@@ -1,0 +1,21 @@
+.headshot {
+  @extend .rounded;
+  @extend .img-fluid;
+}
+
+@media screen and (max-width: 540px) {
+  .headshot {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .headshot {
+    max-height: 275px;
+    float: right;
+  }
+}
+
+.nav-link-current {
+  font-weight: bolder;
+}

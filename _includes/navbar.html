@@ -1,10 +1,32 @@
-<nav class="text-center border-top border-1 border-bottom border-secondary opacity-100 p-2 my-2">
-  {%- for link in site.nav %}
-  <a class="text-decoration-none {%if page.url == link.url %}nav-link-current{% endif -%}"
-    href="{{ link.url | prepend: site.baseurl }}">
-    {{ link.title }}</a>
-  {%- unless forloop.last -%}
-  <span> | </span>
-  {%- endunless -%}
-  {% endfor -%}
+<nav
+    class="navbar navbar-expand border-top border-1 border-bottom border-secondary my-2 p-0"
+>
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse align-items-center" id="navbarText">
+            <ul class="navbar-nav me-auto mb-lg-0">
+                {%- for link in site.nav %}
+                <li class="nav-item">
+                    <a
+                        class="nav-link {%if page.url == link.url %}nav-link-current{% endif -%}"
+                        {%if page.url == link.url %}
+                        aria-current="page"
+                        {% endif %}
+                        href="{{ link.url | prepend: site.baseurl }}"
+                    >
+                        {{ link.title }}
+                    </a>
+                </li>
+                {% endfor -%}
+            </ul>
+            <span class="nav-item">
+                <button
+                    class="btn text-decoration-none"
+                    aria-label="Button to toggle dark mode"
+                    id="theme-toggle"
+                >
+                    <span class="fa-solid" id="theme-toggle-content"></span>
+                </button>
+            </span>
+        </div>
+    </div>
 </nav>

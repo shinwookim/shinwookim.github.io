@@ -10,10 +10,9 @@ $yellow: #f8d476;
 $green: #61bc6d;
 $cyan: #4db3f1;
 
-$primary: $blue;
+$primary: rebeccapurple;
+$body-bg-dark: #222;
 
-// Text Size
-$headings-font-weight: bold;
 $font-size-base: 1rem;
 $h1-font-size: $font-size-base * 1.75;
 $h2-font-size: $font-size-base * 1.55;
@@ -21,21 +20,11 @@ $h3-font-size: $font-size-base * 1.35;
 $h4-font-size: $font-size-base * 1.25;
 $h5-font-size: $font-size-base * 1.15;
 $h6-font-size: $font-size-base;
+$headings-font-weight: bold;
 
-// Fonts
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@font-face {
-  font-family: "Intel One Mono";
-  src: url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff2/IntelOneMono-Regular.woff2")
-      format("woff2"),
-    url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff/IntelOneMono-Regular.woff")
-      format("woff");
-  font-style: normal;
-}
-
-$font-family-sans-serif: "Helvetica Neue", "IBM Plex Sans", Helvetica, Arial,
-  sans-serif;
+$font-family-sans-serif: "Helvetica Neue", "Lato", Helvetica, Arial, sans-serif;
 $font-family-monospace: "Intel One Mono", Consolas;
+
 /*******************
 * Import Bootstrap *
 ********************/

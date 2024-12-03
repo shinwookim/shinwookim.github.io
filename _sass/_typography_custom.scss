@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@font-face {
+  font-family: "Intel One Mono";
+  src: url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff2/IntelOneMono-Regular.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff/IntelOneMono-Regular.woff")
+      format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "autography";
+  font-style: normal;
+  font-weight: normal;
+  src: local("autography"), url("../fonts/autography.woff") format("woff");
+}
+
+.autography {
+  font-family: "autography";
+  font-weight: normal;
+}
+
+.post-title {
+  font-size: 2.5rem;
+}
