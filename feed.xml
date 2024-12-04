@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://people.cs.pitt.edu/~shk148/feed.xml" rel="self" type="application/atom+xml" /><link href="https://people.cs.pitt.edu/~shk148/" rel="alternate" type="text/html" /><updated>2024-12-04T21:38:00+00:00</updated><id>https://people.cs.pitt.edu/~shk148/feed.xml</id><title type="html">Shinwoo Kim</title><subtitle>I am a software developer based in Pittsburgh who is interested in  computer architecture, distributed/operating systems, and compilers.</subtitle><author><name>Shinwoo Kim</name></author><entry><title type="html">CS0449 Project Check-Offs</title><link href="https://people.cs.pitt.edu/~shk148/CS0449-Checkoff.html" rel="alternate" type="text/html" title="CS0449 Project Check-Offs" /><published>2024-09-14T00:00:00+00:00</published><updated>2024-09-14T00:00:00+00:00</updated><id>https://people.cs.pitt.edu/~shk148/CS0449-Checkoff</id><content type="html" xml:base="https://people.cs.pitt.edu/~shk148/CS0449-Checkoff.html"><![CDATA[<h2 id="before-the-check-off">Before the check-off</h2>
+
+<div class="card border-danger mb-3">
+  <div class="card-body">
+    <p class="mb-0"><span class="badge text-bg-danger">New</span>
+  We are trying out <em>rotating sections</em> starting with Project 2. That means, you’ll (possibly) meet with a different TA for each project check-off. See the <a href="#schedule">schedule</a> below for more information.</p>
+  </div>
+</div>
+
+<p>First, make sure you are scheduling your meeting with the right TA. I can’t/won’t assign grades if you’re not enrolled in one of my assigned sections.</p>
+
+<p>Next, click the <a href="#scheduler">link at the bottom of this page</a>, to go to my scheduling page, where you can sign up for your meeting. I’ve set the times in 15-minute increments to allow for some buffer, but the actual meeting will be around ten minutes. Once you make an appointment, you should get a confirmation E-mail.</p>
+
+<blockquote>
+  <p><em>You have approximately two weeks from the project deadline to complete your project check-off. I recommend completing the check-off as early as possible since it can get pretty crowded toward the check-off end date. Plus, it gives you adequate time to prepare for a check-off redo with Luis if you fail (see below).</em></p>
+</blockquote>
+
+<h2 id="during-the-check-off-meeting">During the check-off meeting</h2>
+
+<p>Check-off meetings are <strong>held in person</strong>. That means you’ll have to come meet me in my office (<strong>6510 SENSQ</strong>).</p>
+
+<p class="text-center"><a href="/~shk148/assets/img/office-location.jpg"><img src="/~shk148/assets/img/office-location.jpg" alt="Map to my office at Sennott Square" class="float-md-end col-9 col-md-4" /></a></p>
+
+<blockquote>
+  <p><em>Come up to the 6th floor from the elevators, face the bathrooms, and go left. Go right and immediately left. On the right, you will see a short hallway numbered 6515, with a paper sign on the door saying what rooms are inside. My office is the one at the end on the right.</em></p>
+</blockquote>
+
+<ul>
+  <li>If you have an extraordinary circumstance in which you cannot make your scheduled check-off meeting, <strong>please send me a message ASAP</strong>. I’ll try to accommodate as much as possible (e.g., virtual check-off, reschedule), but <strong>only if you message me beforehand</strong>.</li>
+  <li><strong class="blink text-danger">A check-off meeting “no show” is by default considered a check-off fail.</strong></li>
+</ul>
+
+<p>Once at my office, I’ll ask you some questions about your submission and the project. Your job is to convince me that you wrote the code you submitted and that you understand it. You’re allowed to look (only) at your submission on Gradescope, so I suggest <strong>writing good/many comments in your submission</strong>. You may also be asked to demonstrate your code, so be sure to <strong>bring a laptop</strong>.</p>
+
+<p>After about ten or so minutes, you’ll be told that you either <em>passed</em> or <em>failed</em>. If you passed, congrats! There’s nothing more that you need to do. If you failed, you get one more chance for a check-off redo with Luis. Please wait while I document why you failed; afterward, I’ll give you instructions on how to schedule a check-off redo with Luis.</p>
+
+<p><strong>You may not re-submit your assignment on GradeScope <em>after</em> the check-off meeting</strong>.</p>
+
+<h2 id="project-check-off-schedule">Project Check-off Schedule</h2>
+
+<div class="overflow-x-auto" id="schedule">
+  <table class="table table-light table-hover border border-dark w-auto mx-auto">
+    <thead>
+      <tr>
+        <th style="text-align: left">Project</th>
+        <th style="text-align: center">Check-off Begins</th>
+        <th style="text-align: center">Check-off Ends</th>
+        <th style="text-align: center">Sections</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">P1. BMP Steganography</td>
+        <td style="text-align: center">2024-10-16</td>
+        <td style="text-align: center">2024-11-01</td>
+        <td style="text-align: center">1135, 1150</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">P2. Dynamic Memory Allocator</td>
+        <td style="text-align: center">2024-11-06</td>
+        <td style="text-align: center">2024-11-20</td>
+        <td style="text-align: center">1150, 1110</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">P3. Assembly Bombs &amp; Exploits</td>
+        <td style="text-align: center">2024-12-02</td>
+        <td style="text-align: center">2024-12-13</td>
+        <td style="text-align: center">1110, 1335</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="section-guide">Section Guide</h3>
+
+<dl>
+  <dt>Section 1110</dt>
+  <dd>Lectures on MW 11:00 - 12:15 @ Sennott Square 5502</dd>
+  <dt>Section 1135</dt>
+  <dd>Lectures on TuTh 14:30 – 15:45 @ Cathedral of Learning G8</dd>
+  <dt>Section 1150</dt>
+  <dd>Lectures on MW 15:00 – 16:15 @ Lawrence Hall 209</dd>
+</dl>
+
+<p><button class="mx-auto d-block btn btn-info text-dark" data-cal-link="shinwookim/cs0449" data-cal-namespace="cs0449" data-cal-config="{&quot;layout&quot;:&quot;month_view&quot;}">
+        Click Here to Schedule Check-off
+</button></p>]]></content><author><name>Shinwoo Kim</name></author><category term="CS 0449" /><summary type="html"><![CDATA[Before the check-off]]></summary></entry></feed>
