@@ -6,15 +6,14 @@ permalink: /teaching/
 
 ## Teaching
 
-### Current Courses
+I am no longer teaching at or affiliated with the University of Pittsburgh. Below are my previous courses and materials.
+
+### Previous Courses
 
 | Fall 2024 (Term 2251)                                                                                     |   Role |
 | --------------------------------------------------------------------------------------------------------- | -----: |
 | **CS 0449: Introduction to Systems Software**                                                             | Grader |
-| ^^ [*Office hours by appointment only (including project check-offs)*]({% link _pages/meet-with-me.md %}) |     ^^ |
 {: .table .table-sm .border .border-secondary}
-
-### Previous Courses
 
 | Spring 2024 (Term 2243)                       |   Role |
 | --------------------------------------------- | -----: |

@@ -4,29 +4,32 @@ layout: page
 permalink: /
 ---
 
-I am a graduate student studying computer science in the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I also earned my Bachelor's degree. My current interests lie in the field of **computer systems, operating systems, and computer architecture**, although there are very few things in computer science that I'm _not_ interested in.
 
-During my time at Pitt, I engaged in innovative research and non-research [projects](./projects/), [taught](./teaching/) exceptional students, and advocated for equity and inclusion in STEM education, among other endeavors. Upon graduation, I aim to leverage my expertise in industry to effect meaningful change in the world.
+I am a software developer and computer scientist with a strong interest in **building reliable (distributed) systems**—although there are very few things in computer science that I'm _not_ interested in. I was previously affiliated with the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I earned both a Bachelor’s and a Master’s degree in computer science.
+
+During my time at Pitt, I engaged in innovative research and non-research [projects](./projects/), [taught](./teaching/) exceptional students, and advocated for equity and inclusion in STEM education.
 
 ## Experience
 
-- 2023-_present_, Graduate Student, University of Pittsburgh
-- 2024, Software Engineering Intern, [Ansys Inc. (Digital Twin)](https://www.ansys.com/products/digital-twin)
 - 2021-2024, Part-Time Instructor/Teaching Assistant, University of Pittsburgh
+- 2024, Software Engineering Intern, Ansys Inc. (Digital Twins Team)
+- 2023-2024, Graduate Student, University of Pittsburgh
 - 2021-2022, Diversity Recruitment Educator/Mentor, University of Pittsburgh
 - 2021-2022, STEM Ambassador Fellow, University of Pittsburgh
 - 2021-2023, Undergraduate Student, University of Pittsburgh
 
 ## Education
 
-- (Exp.) 2024, Master of Computer Science, University of Pittsburgh
-- 2023, Bachelor of Computer Science, University of Pittsburgh
+- Master of Computer Science, University of Pittsburgh (2024)
+- Bachelor of Computer Science, University of Pittsburgh (2023)
 
 ## Projects
 
 ### 2024
 {: .h5}
 
+- [A New Pantheon of Congestion Control](https://github.com/shinwookim/NewPantheon)
+- [PChord: Towards A Error-Free Distributed Hash Table using P](https://github.com/shinwookim/PChord)
 - [NBAPositionify: Leveraging Data Mining Techniques to Classify Professional Basketball Players into Positions](https://github.com/shinwookim/NBAPositionify)
 - Research on "_Optimizing Speculative Decoding in Large Language Models_"
 - PittRCDB: Columnar Database with Support for Row-Column Memory Buffers, Concurrent Transactions, and Crash Tolerance
