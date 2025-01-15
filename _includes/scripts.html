@@ -17,7 +17,7 @@
         .then((data) => {
           document.getElementById(
             "resume-pdf"
-          ).innerHTML = `<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=${data[0]["browser_download_url"]}" width="500" height="375">`;
+          ).innerHTML = `<embed src="${data[0]["browser_download_url"]}" width="500" height="375">`;
         })
         .catch((error) => {
           console.error(error); // Handle any errors
