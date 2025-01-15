@@ -1,9 +1,20 @@
 <nav
-    class="navbar navbar-expand border-top border-1 border-bottom border-secondary my-2 p-0"
+    class="navbar navbar-expand-sm border-top border-1 border-bottom border-secondary my-2 p-0"
 >
     <div class="container-fluid">
-        <div class="collapse navbar-collapse align-items-center" id="navbarText">
-            <ul class="navbar-nav me-auto mb-lg-0">
+        <button
+            class="navbar-toggler btn mx-auto w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse align-items-center" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-lg-0 text-center">
                 {%- for link in site.nav %}
                 <li class="nav-item">
                     <a
@@ -20,7 +31,7 @@
             </ul>
             <span class="nav-item">
                 <button
-                    class="btn text-decoration-none"
+                    class="btn text-decoration-none text-center w-100"
                     aria-label="Button to toggle dark mode"
                     id="theme-toggle"
                 >
