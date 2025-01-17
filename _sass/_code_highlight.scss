@@ -12,8 +12,10 @@
 
 .highlight,
 .highlight .w {
+    @extend .rounded-3;
+    margin-bottom: 1rem;
     color: #fbf1c7;
-    background-color: #282828;
+    background-color: #121212;
     padding: 0.5em 1em;
 }
 

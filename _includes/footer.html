@@ -1,32 +1,21 @@
-<footer class="container">
-  <hr />
-  <div class="d-flex flex-wrap justify-content-between align-items-center">
-    <div>
-      <a class="text-decoration-none autography display-6 mt-5" href="{{ '/' | relative_url }}">
-        {{ site.title }}
-      </a>
+<footer>
+    <hr />
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <div>
+            <a
+                class="text-decoration-none autography display-6 mt-5"
+                href="{{ '/' | relative_url }}"
+            >
+                {{ site.title }}
+            </a>
+        </div>
+        <div>
+            <span class="text-body-secondary">
+                &copy; 2020-{{ site.time | date:"%Y" }}
+                <a class="text-body-secondary" href="mailto:{{ site.email }}">
+                    {{site.author}}</a
+                >, All Rights Reserved.
+            </span>
+        </div>
     </div>
-    <div>
-      <span class="text-body-secondary">
-        &copy; 2020-{{ site.time | date:"%Y" }}
-        <a class="text-body-secondary" href="mailto:{{ site.email }}">
-          {{site.author}}</a>,
-        All Rights Reserved.
-      </span>
-    </div>
-    <div class="">
-      <a class="text-decoration-none" href="https://twitter.com/{{ site.twitter_username }}"
-        aria-label="Hyperlink to Shinwoo's X (Twitter) profile">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
-      <a class="text-decoration-none" href="https://github.com/{{ site.github_username }}"
-        aria-label="Hyperlink to Shinwoo's GitHub profile">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a class="text-decoration-none" href="https://linkedin.com/in/{{ site.linkedin_username }}"
-        aria-label="Hyperlink to Shinwoo's LinkedIn profile">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-    </div>
-  </div>
 </footer>
