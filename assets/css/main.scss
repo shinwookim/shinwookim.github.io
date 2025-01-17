@@ -70,3 +70,8 @@ th {
 table {
     @extend .table;
 }
+
+.post {
+    text-align: justify;
+    text-justify: inter-word;
+}
