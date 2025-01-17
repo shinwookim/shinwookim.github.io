@@ -1,23 +1,24 @@
 .headshot {
-  @extend .rounded;
-  @extend .img-fluid;
-}
-
-@media screen and (max-width: 540px) {
-  .headshot {
-    width: 45%;
-  }
+    @extend .rounded;
+    @extend .img-fluid;
 }
 
 @media screen and (min-width: 540px) {
-  .headshot {
-    max-height: 275px;
-    float: right;
-  }
+    .headshot {
+        max-height: 275px;
+    }
 }
 
 .nav-link-current {
-  font-weight: bolder;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    @extend .text-body;
 }
 
 .navbar-toggler,
