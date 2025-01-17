@@ -43,13 +43,13 @@ nav:
   - title: Home
     url: /
   - title: Projects
-    url: /#projects
+    url: /projects/
   - title: Teaching
     url: /teaching/
   - title: Résumé
     url: /resume/
-  - title: Meet
-    url: /meet-with-me/
+  - title: Connect
+    url: /connect-with-me/
 
 google_analytics: G-X43BZS6F4C
 
