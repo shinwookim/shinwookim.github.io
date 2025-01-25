@@ -16,10 +16,16 @@
         <div class="collapse navbar-collapse align-items-center" id="navbarNav">
             <ul class="navbar-nav me-auto mb-lg-0 text-center">
                 {%- for link in site.nav %}
+                    {% assign current = false %}
+                    {% if link.url == '/' %}
+                        {% if page.url == '/' %}{% assign current = true %}{% endif %}
+                    {% else %}
+                        {% if page.url contains link.url %}{% assign current = true %}{% endif %}
+                    {% endif %}
                 <li class="nav-item">
                     <a
-                        class="nav-link {%if page.url == link.url %}nav-link-current{% endif -%}"
-                        {%if page.url == link.url %}
+                        class="nav-link {% if current == true %}nav-link-current{% endif %}"
+                        {% if current == true %}
                         aria-current="page"
                         {% endif %}
                         href="{{ link.url | prepend: site.baseurl }}"

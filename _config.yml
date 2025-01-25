@@ -11,7 +11,7 @@ linkedin_username: kimshinwoo
 keybase_username: shinwookim
 
 header_info:
-  job_title: <s>Software Engineer</s><br />Enlisted Soldier
+  job_title: <s>Software Engineer</s><br /><a href="https://en.wikipedia.org/wiki/Conscription_in_South_Korea">Enlisted Soldier</a>
   company: Republic of Korea Army
 
 mastodon:
@@ -44,12 +44,12 @@ nav:
     url: /
   - title: Projects
     url: /projects/
-  - title: Teaching
-    url: /teaching/
   - title: Résumé
     url: /resume/
   - title: Connect
     url: /connect-with-me/
+  - title: Archive
+    url: /archive/
 
 google_analytics: G-X43BZS6F4C
 

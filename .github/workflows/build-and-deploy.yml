@@ -1,7 +1,7 @@
 name: Build & Deploy Complete Site
 on:
   push:
-    branches: [ 'main' ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -32,13 +32,13 @@ jobs:
           mkdir merged-site
           mkdir merged-site/teaching
           /bin/cp -rf main-site/* merged-site/
-          /bin/cp -rf teaching-site/* merged-site/teaching/
+          /bin/cp -rf teaching-site/* merged-site/archive/teaching/
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: merged-site
           path: merged-site
-  
+
   deploy:
     name: Deploy Site
     runs-on: ubuntu-latest
@@ -56,5 +56,5 @@ jobs:
           publish_dir: ./merged-site
           publish_branch: staging
           force_orphan: true
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
