@@ -3,8 +3,7 @@ layout: page
 title: Connect with Me
 ---
 
-{:.alert .alert-warning role="alert"}
-_I am currently completing my [compulsory military service](https://en.wikipedia.org/wiki/Conscription_in_South_Korea) with a scheduled discharge date of September 2025. During this time, I am not able to readily respond to communications via email, social media, etc._
+{% include_relative _flash_alert.md %}
 
 ## Meet with me
 

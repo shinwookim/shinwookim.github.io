@@ -1,0 +1,2 @@
+{:.alert .alert-warning role="alert"}
+_I am currently completing my [compulsory military service](https://en.wikipedia.org/wiki/Conscription_in_South_Korea), with a scheduled discharge date of September 2025. During this period, I may not be able to respond promptly to communications via email, social media, or other channels._
