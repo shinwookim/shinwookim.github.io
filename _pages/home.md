@@ -6,7 +6,7 @@ permalink: /
 
 {% include_relative _flash_alert.md %}
 
-I am a software developer and computer scientist with a strong interest in **building reliable (distributed) systems**—although there are very few things in computer science that I'm _not_ interested in. I was previously affiliated with the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I earned both a Bachelor’s and a Master’s degree in computer science.
+I am a software developer and computer scientist with a strong interest in **building reliable (distributed) systems**—though there are very few things in computer science that I'm _not_ interested in. I was previously affiliated with the [School of Computing and Information](https://sci.pitt.edu) at the [University of Pittsburgh](https://pitt.edu), where I earned both a Bachelor’s and a Master’s degree in Computer Science.
 
 During my time at Pitt, I engaged in innovative research and non-research [projects]({% link _pages/projects.md %}), [taught]({% link _pages/archive/teaching.md %}) exceptional students, and advocated for equity and inclusion in STEM education.
 
@@ -39,7 +39,7 @@ During my time at Pitt, I engaged in innovative research and non-research [proje
   University of Pittsburgh
   {: .small}
 
-- <span class="fa-li fas fa-graduation-cap"></span> M.S., Computer Science, 2024
+- <span class="fa-li fas fa-graduation-cap"></span> B.S., Computer Science, 2023
   {: }
   University of Pittsburgh
   {: .small}
