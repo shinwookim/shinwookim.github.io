@@ -13,33 +13,32 @@ During my time at Pitt, I engaged in innovative research and non-research [proje
 ## Experience
 
 {%- for experience in site.data.experience %}
+<div class="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-x-4 items-baseline">
 
-<div class="row">
-  <div class="col fw-bold">
-    {% if experience.start_year == experience.end_year%}
+<div class="font-bold whitespace-nowrap">
+  {% if experience.start_year == experience.end_year %}
     {{experience.start_year}}.
-    {% else %}
-    {{experience.start_year }} – {{experience.end_year }}.
-    {% endif %}
-  </div>
-  <div class="col-12 col-sm-9" markdown="1">{: .mb-0}
-{{experience.title}}, {{experience.company}}
-  </div>
+  {% else %}
+    {{experience.start_year}} – {{experience.end_year}}.
+  {% endif %}
+</div>
+
+<div markdown="1" class="[&>*]:my-0">
+  {{experience.title}}, {{experience.company}}
+</div>
+
+
 </div>
 {% endfor %}
 
-{: .mt-3}
-
 ## Education
 
-{: .fa-ul}
+{: .fa-ul .[&_li_p]:my-0}
 
-- <span class="fa-li fas fa-graduation-cap"></span> M.S., Computer Science, 2024
-  {: }
+- <span class="fa-li fas fa-graduation-cap"></span> M.S., Computer Science, 2024  
   University of Pittsburgh
-  {: .small}
+  {: .text-sm}
 
-- <span class="fa-li fas fa-graduation-cap"></span> B.S., Computer Science, 2023
-  {: }
+- <span class="fa-li fas fa-graduation-cap"></span>B.S., Computer Science, 2023  
   University of Pittsburgh
-  {: .small}
+  {: .text-sm}

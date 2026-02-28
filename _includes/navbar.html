@@ -1,49 +1,31 @@
-<nav
-    class="navbar navbar-expand-sm border-top border-1 border-bottom border-secondary my-2 p-0"
->
-    <div class="container-fluid">
-        <button
-            class="navbar-toggler btn mx-auto w-100"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse align-items-center" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-lg-0 text-center">
-                {%- for link in site.nav %}
-                    {% assign current = false %}
-                    {% if link.url == '/' %}
-                        {% if page.url == '/' %}{% assign current = true %}{% endif %}
-                    {% else %}
-                        {% if page.url contains link.url %}{% assign current = true %}{% endif %}
-                    {% endif %}
-                <li class="nav-item">
-                    <a
-                        class="nav-link {% if current == true %}nav-link-current{% endif %}"
-                        {% if current == true %}
-                        aria-current="page"
-                        {% endif %}
-                        href="{{ link.url | prepend: site.baseurl }}"
-                    >
-                        {{ link.title }}
-                    </a>
-                </li>
-                {% endfor -%}
-            </ul>
-            <span class="nav-item">
-                <button
-                    class="btn text-decoration-none text-center w-100"
-                    aria-label="Button to toggle dark mode"
-                    id="theme-toggle"
-                >
-                    <span class="fa-solid" id="theme-toggle-content"></span>
-                </button>
-            </span>
-        </div>
-    </div>
+<nav class="border-y-[1px]  my-2">
+	<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+		<!-- Mobile toggle -->
+		<button id="nav-toggle" class="sm:hidden w-full py-2 text-center cursor-pointer" aria-label="Toggle navigation">
+			☰
+		</button>
+		<!-- Navigation -->
+		<ul id="nav-menu" class="hidden sm:w-full sm:flex flex-col sm:flex-row text-center sm:text-left gap-1 sm:gap-6">
+			{%- for link in site.nav %}
+			{% assign current = false %}
+			{% if link.url == '/' %}
+			{% if page.url == '/' %}{% assign current = true %}{% endif %}
+			{% else %}
+			{% if page.url contains link.url %}{% assign current = true %}{% endif %}
+			{% endif %}
+			<li>
+				<a href="{{ link.url | prepend: site.baseurl }}"
+					class="block py-2 px-3 hover:underline [text-underline-position:under] {% if current %} underline font-bold {% endif %}"
+					{% if current %}aria-current="page" {% endif %}>
+					{{ link.title }}
+				</a>
+			</li>
+			{% endfor -%}
+			<li class="sm:ml-auto">
+				<button id="theme-toggle" aria-label="Toggle dark mode" class="py-2 px-3 text-center sm:text-left">
+					<span class="fa-solid" id="theme-toggle-content"></span>
+				</button>
+			</li>
+		</ul>
+	</div>
 </nav>

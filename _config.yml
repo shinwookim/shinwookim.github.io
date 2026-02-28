@@ -29,10 +29,7 @@ markdown: kramdown
 kramdown:
   highlighter: rouge
   input: GFM
-sass:
-  load_paths:
-    - _sass
-    - node_modules/bootstrap/scss
+  
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
