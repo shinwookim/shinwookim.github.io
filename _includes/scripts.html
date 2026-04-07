@@ -1,50 +1,42 @@
 <script src="{% link /assets/js/darkmode_toggle.js %}"></script>
+<script src="{% link /assets/js/nav_toggle.js %}"></script>
 <script src="https://kit.fontawesome.com/ad13315ac8.js" crossorigin="anonymous"></script>
-<script src="{% link /assets/js/bootstrap.bundle.min.js %}"></script>
-{% if site.google_analytics and jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
+
+{% if site.google_analytics and jekyll.environment == 'production' %}{% include analytics.html %}{% endif %}
 
 {% if page.include contains "resume" %}
 <script>
-  const release_url =
-    "https://api.github.com/repos/shinwookim/resume/releases/latest";
-  fetch(release_url)
-    .then((response) => response.json()) // Parse JSON response data
-    .then((data) => {
-      fetch(data["assets_url"])
-        .then((response) => response.json())
-        .then((data) => {
-          document.getElementById(
-            "resume-pdf"
-          ).innerHTML = `<embed src="${data[0]["browser_download_url"]}" width="500" height="375">`;
-        })
-        .catch((error) => {
-          console.error(error); // Handle any errors
-        });
-      const last_modified = new Date(data["published_at"]);
-      document.getElementById(
-        "resume-last-updated"
-      ).innerHTML = `<a href='https://github.com/shinwookim/resume/releases/latest'>${last_modified.toDateString()}</a >`;
-    })
-    .catch((error) => {
-      console.error(error); // Handle any errors
-    });
+	const release_url =
+		"https://api.github.com/repos/shinwookim/resume/releases/latest";
+	fetch(release_url)
+		.then((response) => response.json()) // Parse JSON response data
+		.then((data) => {
+			fetch(data["assets_url"])
+				.then((response) => response.json())
+				.then((data) => {
+					document.getElementById(
+						"resume-pdf"
+					).innerHTML = `<embed src="${data[0]["browser_download_url"]}" width="500" height="375">`;
+				})
+				.catch((error) => {
+					console.error(error); // Handle any errors
+				});
+			const last_modified = new Date(data["published_at"]);
+			document.getElementById(
+				"resume-last-updated"
+			).innerHTML = `<a href='https://github.com/shinwookim/resume/releases/latest'>${last_modified.toDateString()}</a >`;
+		})
+		.catch((error) => {
+			console.error(error); // Handle any errors
+		});
 </script>
 {% endif %}
 
+
+<!-- TODO: Remove -->
 {%- if page.include contains "bs-tooltip" -%}
 <script>
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
-{%- endif -%}
-{%- if page.include contains "cal-cs449" -%}
-<!-- Cal element-click embed code begins -->
-<script>
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", "cs0449", { origin: "https://cal.com" });
-  Cal.ns.cs0449("ui", { "styles": { "branding": { "brandColor": "#000000" } }, "hideEventTypeDetails": false, "layout": "column_view" });
-</script>
-<!-- Cal element-click embed code ends -->
 {%- endif -%}

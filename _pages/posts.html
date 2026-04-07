@@ -4,14 +4,13 @@ layout: page
 ---
 
 {% assign date_format = "%y. %m. %-d." %}
-
-<ul class="list-unstyled mt-3">
+<ul class="mt-3 space-y-3 list-none p-0">
     {% for post in site.posts %}
-    <li class="d-flex justify-content-between my-3 px-5">
-        <a href="{{ post.url | relative_url }}" class="nav-link">
+    <li class="flex justify-between items-center px-5">
+        <a href="{{ post.url | relative_url }}">
             {{ post.title }}
         </a>
-        <span class="text-body-secondary">
+        <span class="text-sm text-gray-500">
             {{ post.date | date: date_format }}
         </span>
     </li>
