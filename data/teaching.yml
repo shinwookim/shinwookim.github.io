@@ -1,0 +1,41 @@
+- term: "Fall 2024 (Term 2251)"
+  courses:
+    - name: "**CS 0449: Introduction to Systems Software**"
+      link: "./CS0449-2251/"
+      role: "Grader"
+
+- term: "Spring 2024 (Term 2243)"
+  courses:
+    - name: "**CS 0449: Introduction to Systems Software**"
+      link: "./CS0449-2243/"
+      role: "Grader"
+
+- term: "Fall 2023 (Term 2241)"
+  courses:
+    - name: "**CS 0449: Introduction to Systems Software**"
+      link: "./CS0449-2241/"
+      role: "Recitation TA"
+
+- term: "Spring 2023 (Term 2234)"
+  courses:
+    - name: "**CS 0449: Introduction to Systems Software**"
+      link: "./CS0449-2234/"
+      role: "Recitation TA"
+    - name: "**CS 0441: Discrete Structures for Computer Science**"
+      link: "./CS0441-2234/"
+      role: ""
+
+- term: "Fall 2022 (Term 2231)"
+  courses:
+    - name: "**CS 0441: Discrete Structures for Computer Science**"
+      link: "./CS0441-2231/"
+      role: "Recitation TA"
+
+- term: "Fall 2021 (Term 2211)"
+  courses:
+    - name: "**Bridges to IT: Jump-Starting a Career in IT**"
+      link: "./bridges-to-it.html"
+      role: "Primary Instructor"
+    - name: "**CEC STEAM Saturday Courses**"
+      link: ""
+      role: ""

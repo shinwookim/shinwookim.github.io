@@ -1,7 +1,17 @@
-{{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ end }}
+{{ define "body" }}
+{{ partial "mini_header.html" . }}
+<main class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
+	<h1 class="mb-5">{{ .Title }}</h1>
+	<div class="mx-auto mt-3 flex flex-wrap justify-center gap-2 not-prose">
+    	{{ range .Pages }}
+		<span class="px-3 py-1 border text-sm"><a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a></span>
+		{{- end }}
+	</div>
+</main>
+
+<footer class="my-3 border-t-1">{{ partial "footer.html" . }}</footer>
+
+{{ partial "scripts.html" . }}
 {{ end }}
+
+

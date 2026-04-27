@@ -1,0 +1,24 @@
+{{ range hugo.Data.teaching }}
+<div class="not-prose">
+    <table class="table-auto table-sm w-full text-sm border border-collapse border-secondary mb-4">
+        <thead>
+            <tr>
+                <th>{{ .term }}</th>
+                <th class="text-end">Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range .courses }}
+            <tr>
+                <td>
+                    {{ if .link }}
+                    <a class="underline" href="{{ .link | safeURL }}">{{ .name | markdownify }}</a>
+                    {{ else }} {{ .name | markdownify }} {{ end }}
+                </td>
+                <td class="text-end">{{ .role }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</div>
+{{ end }}

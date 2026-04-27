@@ -1,21 +1,22 @@
 {{ define "body" }}
-{{ partial "mini_header.html" . }}
+<header class="max-w-3xl mx-auto">
+	{{ partial "header.html" . }}
+</header>
 <main class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
-	<h1 class="mb-0">#{{ .Title }}</h1>
-    <p class="mt-0">Posts tagged with <i>#{{ .Title }}</i></p>
-	{{ range .Pages }}
+    <h1>{{ .Title }}</h1>
+    {{ range .Pages }}
     <div class="flex justify-between items-center">
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         <span class="text-sm text-gray-500">
             <time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>{{ .Date | time.Format ":date_long" }}</time>
         </span>
     </div>
     {{ end }}
-    <a class="block text-center text-gray-700" href="{{ "/tags/" | relURL }}">↪ Back to all tags</a>
+
 </main>
-
-<footer class="my-3 border-t-1">{{ partial "footer.html" . }}</footer>
+<footer class="my-3 border-t-1">
+	{{ partial "footer.html" . }}
+</footer>
 {{ partial "scripts.html" . }}
+
 {{ end }}
-
-

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
+    <h1>{{ .Title }}</h1>
+
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    {{ .Content }}
+</div>
+
+{{/* partial "terms.html" (dict "taxonomy" "tags" "page" .) */}}
+{{ end }}

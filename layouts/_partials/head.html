@@ -1,7 +1,10 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ with (templates.Defer (dict "key" "global")) }}
-   {{ partial "head/css.html" . }}
- {{ end }}
-{{ partialCached "head/js.html" . }}
+{{- with (templates.Defer (dict "key" "global")) -}}
+{{- partial "head/css.html" . -}}
+{{- end -}}
+{{/* {{- partialCached "head/js.html" . -}} */}}
+{{- partialCached "head/favicon.html" . -}}
+<link rel="me" href="https://discuss.systems/@shinwoo" />
+<meta name="google-site-verification" content="e1xnIMrmu01RD3c5tiz0v75hhIJQZciraWGrtxtUYhc" />

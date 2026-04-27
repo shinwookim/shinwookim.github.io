@@ -1,0 +1,2 @@
+{{ $msg := .Get "message" | default "Default alert text!" }}
+{{ partial "flash_alert.html" (dict "Message" $msg) }}

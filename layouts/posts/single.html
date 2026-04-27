@@ -1,0 +1,26 @@
+{{ define "body" }}
+{{ partial "mini_header.html" . }}
+<main
+	class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1"
+>
+	{{ block "main" . }}{{ end }}
+</main>
+
+<footer class="my-3 border-t-1">{{ partial "footer.html" . }}</footer>
+
+{{ partial "scripts.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="mb-3">
+	{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+	<h1 class="text-4xl md:text-5xl font-bold my-0">{{ .Title }}</h1>
+	{{- if .Params.Subtitle -}}
+	<p class="text-lg mt-0 mb-0">{{ .Params.Subtitle }}</p>
+	{{- end -}}
+	<div class="text-sm">
+		{{ .Date.Format "January 2, 2006" }} | {{math.Round (div (countwords
+		.Content) 200.0) }} min read
+	</div>
+</div>
+{{ .Content }} {{ end }}

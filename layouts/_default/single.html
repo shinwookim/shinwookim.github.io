@@ -1,0 +1,14 @@
+{{ define "body" }}
+<header class="max-w-3xl mx-auto">
+	{{ partial "header.html" . }}
+</header>
+<main class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
+</main>
+<footer class="my-3 border-t-1">
+	{{ partial "footer.html" . }}
+</footer>
+{{ partial "scripts.html" . }}
+
+{{ end }}

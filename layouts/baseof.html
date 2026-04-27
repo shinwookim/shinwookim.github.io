@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<!doctype html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}" class="scroll-smooth">
+
 <head>
-  {{ partial "head.html" . }}
+	{{ partial "head.html" . }}
 </head>
-<body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+
+<body class="md:max-w-[700px] md:mx-auto md:p-4 bg-white text-black dark:bg-[#222] dark:text-white p-3">
+	{{ block "body" . }} {{ end }}
 </body>
+
 </html>

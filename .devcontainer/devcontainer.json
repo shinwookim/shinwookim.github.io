@@ -1,0 +1,25 @@
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/hugo:1": {
+			"extended": true
+		},
+		"ghcr.io/devcontainers-contrib/features/actionlint:1": {},
+		"ghcr.io/devcontainers-contrib/features/gh-cli:1": {},
+		"ghcr.io/devcontainers/features/node:1": {
+			"installAsRoot": true
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eliostruyf.vscode-front-matter"
+			]
+		}
+	},
+	"forwardPorts": [
+		1313
+	],
+	"postCreateCommand": "git submodule update --init && npm install"
+}
