@@ -1,0 +1,29 @@
+{{ $profile_original := resources.Get "images/profile.webp" }}
+{{ $small := $profile_original.Resize "400x" }}
+{{ $medium := $profile_original.Resize "800x" }}
+{{ $large := $profile_original.Resize "1200x" }}
+<div id="namecard" class="bg-gray-100  p-5">
+	<div class="flex items-center justify-between">
+		<a class="autography text-3xl no-underline text-black"
+			href="{{ .Site.Home.RelPermalink }}"> {{ .Site.Title }} </a>
+		<img
+			src="{{ $medium.RelPermalink }}"
+			srcset="{{ $small.RelPermalink }} 400w,
+			{{ $medium.RelPermalink }} 800w,
+			{{ $large.RelPermalink }} 1200w"
+			sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+			class="h-15 w-15 rounded-lg object-cover"
+			loading="lazy"
+			decoding="async"
+			alt="Portrait of Shinwoo Kim"
+		/>
+	</div>
+	<a
+		type="button"
+		href="{{ "posts/index.xml" | relURL }}"
+		class= "text-gray-950 no-underline
+		text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+	>
+		Subscribe +
+	</a>
+</div>

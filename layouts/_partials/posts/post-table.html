@@ -1,0 +1,21 @@
+<div class="border border-gray-300 px-6 py-3 mb-5 not-prose">
+	<p class="font-bold mb-2 border-b border-gray-300">Other Posts / 다른 글</p>
+	<div>
+		<table class="w-full">
+			<tbody>
+				{{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
+				<tr class="prose prose-custom dark:prose-invert text-sm">
+					<td>
+						<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+					</td>
+					<td class="w-40 text-right">
+						<time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
+							{{ .Date.Format "2006.01.02." }}
+						</time>
+					</td>
+				</tr>
+				{{ end }}
+			</tbody>
+		</table>
+	</div>
+</div>

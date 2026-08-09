@@ -76,3 +76,9 @@ target = "assets/notwatching/hugo_stats.json"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[outputs]
+home = ['html']
+section = ['html']
+taxonomy = ['html']
+term = ['html']

@@ -1,22 +1,19 @@
 {{ define "body" }}
-<header class="max-w-3xl mx-auto">
-	{{ partial "header.html" . }}
-</header>
-<main class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
-    <h1>{{ .Title }}</h1>
-    {{ range .Pages }}
-    <div class="flex justify-between items-center">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <span class="text-sm text-gray-500">
-            <time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>{{ .Date | time.Format ":date_long" }}</time>
-        </span>
-    </div>
-    {{ end }}
-
-</main>
-<footer class="my-3 border-t-1">
-	{{ partial "footer.html" . }}
-</footer>
-{{ partial "scripts.html" . }}
-
-{{ end }}
+<div class="md:max-w-175 md:mx-auto md:p-4 bg-white text-black dark:bg-[#222] dark:text-white p-3">
+	<header class="max-w-3xl mx-auto">{{ partial "header.html" . }}</header>
+	<main class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
+		<h1>{{ .Title }}</h1>
+		{{ range .Pages }}
+		<div class="flex justify-between items-center">
+			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<span class="text-sm text-gray-500">
+				<time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
+					{{ .Date | time.Format ":date_long" }}
+				</time>
+			</span>
+		</div>
+		{{ end }}
+	</main>
+	<footer class="my-3 border-t">{{ partial "footer.html" . }}</footer>
+</div>
+{{ partial "scripts.html" . }} {{ end }}
