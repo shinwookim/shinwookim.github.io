@@ -8,8 +8,10 @@
 @font-face {
 	font-family: "Intel One Mono";
 	src:
-		url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff2/IntelOneMono-Regular.woff2") format("woff2"),
-		url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff/IntelOneMono-Regular.woff") format("woff");
+		url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff2/IntelOneMono-Regular.woff2")
+			format("woff2"),
+		url("https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff/IntelOneMono-Regular.woff")
+			format("woff");
 	font-style: normal;
 }
 
@@ -50,7 +52,7 @@
 	--tw-prose-quote-borders: theme(colors.black);
 	--tw-prose-captions: theme(colors.black);
 	--tw-prose-code: theme(colors.black);
-	--tw-prose-pre-code: theme(colors.black);
+	--tw-prose-pre-code: theme(colors.white);
 	--tw-prose-pre-bg: theme(colors.black);
 	--tw-prose-th-borders: theme(colors.black);
 	--tw-prose-td-borders: theme(colors.black);
@@ -97,7 +99,6 @@
 		font-weight: normal;
 	}
 
-
 	.alert {
 		@apply rounded-md p-4;
 	}
@@ -116,15 +117,14 @@
 		color: theme(colors.secondary);
 	}
 
-	.prose :not(pre)>code::before,
-	.prose :not(pre)>code::after {
+	.prose :not(pre) > code::before,
+	.prose :not(pre) > code::after {
 		content: none;
 	}
 
 	.prose {
-
-		& ul>li,
-		& ol>li {
+		& ul > li,
+		& ol > li {
 			@apply my-0;
 		}
 	}

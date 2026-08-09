@@ -6,7 +6,7 @@ layout: "contact"
 
 ## Meet with me
 
-Currently, not available to meet with anyone (see above).
+Currently, not available to meet with anyone.
 
 ## Connect with me
 
