@@ -1,5 +1,11 @@
 <script src="https://kit.fontawesome.com/ad13315ac8.js" crossorigin="anonymous"></script>
 
-{{ partial "js.html" (dict "script" "js/nav_toggle.js") }}
-{{ partial "js.html" (dict "script" "js/darkmode_toggle.js") }}
-{{ partial "js.html" (dict "script" "js/main.js") }}
+{{ $bundle := slice
+    (resources.Get "js/nav_toggle.js")
+    (resources.Get "js/darkmode_toggle.js")
+    | resources.Concat "js/bundle.js"
+    | minify
+    | fingerprint
+}}
+
+<script src="{{ $bundle.RelPermalink }}"></script>

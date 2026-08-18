@@ -82,3 +82,7 @@ home = ['html']
 section = ['html']
 taxonomy = ['html']
 term = ['html']
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']

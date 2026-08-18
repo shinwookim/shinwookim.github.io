@@ -1,10 +1,10 @@
 <div class="border border-gray-300 px-6 py-3 mb-5 not-prose">
 	<p class="font-bold mb-2 border-b border-gray-300">Other Posts / 다른 글</p>
 	<div>
-		<table class="w-full">
+		<table class="w-full border-none">
 			<tbody>
-				{{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
-				<tr class="prose prose-custom dark:prose-invert text-sm">
+				{{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+				<tr class="prose-custom dark:prose-invert text-sm">
 					<td>
 						<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 					</td>

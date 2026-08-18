@@ -1,0 +1,109 @@
+@theme {
+	--font-mono: "Intel One Mono", Consolas, monospace;
+	--font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--color-blue: #164273;
+	--color-red: #c12727;
+	--color-orange: #de732b;
+	--color-yellow: #f8d476;
+	--color-green: #61bc6d;
+	--color-cyan: #4db3f1;
+	--color-primary: rebeccapurple;
+	--color-secondary: #6c757d;
+	--color-black: #000;
+	--color-white: #fff;
+}
+@utility prose-custom {
+	@apply prose;
+	max-width: none;
+	--tw-prose-body: var(--colors-black);
+	--tw-prose-headings: var(--colors-black);
+	--tw-prose-lead: var(--colors-black);
+	--tw-prose-links: var(--colors-black);
+	--tw-prose-bold: var(--colors-black);
+	--tw-prose-counters: var(--colors-black);
+	--tw-prose-bullets: var(--colors-black);
+	--tw-prose-hr: var(--colors-black);
+	--tw-prose-quotes: var(--colors-black);
+	--tw-prose-quote-borders: var(--colors-black);
+	--tw-prose-captions: var(--colors-black);
+	--tw-prose-code: var(--colors-black);
+	--tw-prose-pre-code: var(--colors-white);
+	--tw-prose-pre-bg: var(--colors-black);
+	--tw-prose-th-borders: var(--colors-black);
+	--tw-prose-td-borders: var(--colors-black);
+	--tw-prose-invert-body: var(--colors-white);
+	--tw-prose-invert-headings: var(--colors-white);
+	--tw-prose-invert-lead: var(--colors-white);
+	--tw-prose-invert-links: var(--colors-white);
+	--tw-prose-invert-bold: var(--colors-white);
+	--tw-prose-invert-counters: var(--colors-white);
+	--tw-prose-invert-bullets: var(--colors-white);
+	--tw-prose-invert-hr: var(--colors-white);
+	--tw-prose-invert-quotes: var(--colors-white);
+	--tw-prose-invert-quote-borders: var(--colors-white);
+	--tw-prose-invert-captions: var(--colors-white);
+	--tw-prose-invert-code: var(--colors-white);
+	--tw-prose-invert-pre-code: var(--colors-white);
+	--tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+	--tw-prose-invert-th-borders: var(--colors-white);
+	--tw-prose-invert-td-borders: var(--colors-white);
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply mb-0 mt-1;
+	}
+	h1 {
+		@apply text-3xl font-bold;
+	}
+	h2 {
+		@apply text-2xl font-bold;
+	}
+	h3 {
+		@apply text-xl font-semibold;
+	}
+	h4 {
+		@apply text-lg font-semibold;
+	}
+	h5 {
+		@apply text-base font-medium;
+	}
+	h6 {
+		@apply text-sm font-medium;
+	}
+	a {
+		text-underline-position: under;
+		font-weight: normal;
+	}
+	a:hover {
+		@apply text-gray-600;
+	}
+
+	ul,
+	& ul > *,
+	ol,
+	& ol > * {
+		@apply mt-0 mb-0;
+	}
+
+	thead {
+		@apply bg-gray-200 border-b-2;
+		tr > th {
+			@apply p-0 text-black;
+		}
+	}
+	code {
+		font-weight: 500;
+	}
+	code::before,
+	code::after {
+		content: none;
+	}
+
+	table {
+		@apply border-t-2 border-b-2;
+	}
+}

@@ -4,7 +4,13 @@
 {{- with (templates.Defer (dict "key" "global")) -}}
 {{- partial "head/css.html" . -}}
 {{- end -}}
-{{/* {{- partialCached "head/js.html" . -}} */}}
 {{- partialCached "head/favicon.html" . -}}
 <link rel="me" href="https://discuss.systems/@shinwoo" />
 <meta name="google-site-verification" content="e1xnIMrmu01RD3c5tiz0v75hhIJQZciraWGrtxtUYhc" />
+{{ with .Description }}
+  <meta name="description" content="{{ . }}">
+{{ else }}
+  {{ with site.Params.description }}
+    <meta name="description" content="{{ . }}">
+  {{ end }}
+{{ end }}
