@@ -1,0 +1,31 @@
+{{ $class := .class | default "" }}
+<div {{ if $class -}} class="{{$class}}" {{- end }}>
+	<a href="mailto:{{ site.Params.email }}" class="inline-flex items-center">
+		{{ partial "icon.html" (dict "icon" "envelope") }}
+		<span class="font-mono">{{ site.Params.email }}</span>
+	</a>
+	<a href="https:/{{ site.Params.mastodon.instance }}/{{ site.Params.mastodon.handle }}" class="inline-flex items-center">
+		{{ partial "icon.html" (dict "icon" "mastadon") }}
+		<span class="font-mono">
+			{{ site.Params.mastodon.handle }}@{{ site.Params.mastodon.instance }}
+		</span>
+	</a>
+	<div class="hidden sm:flex flex-wrap gap-x-4 gap-y-1">
+		<a href="https://keybase.io{{ site.Params.keybase }}" class="inline-flex items-center">
+			{{ partial "icon.html" (dict "icon" "keybase") }}
+			<span class="font-mono">{{ site.Params.keybase }}</span>
+		</a>
+		<a href="https://github.com{{ site.Params.github }}" class="inline-flex items-center">
+			{{ partial "icon.html" (dict "icon" "github") }}
+			<span class="font-mono">{{ site.Params.github }}</span>
+		</a>
+		<a href="https://linkedin.com/in{{ site.Params.linkedin }}" class="inline-flex items-center">
+			{{ partial "icon.html" (dict "icon" "linkedin") }}
+			<span class="font-mono">{{ site.Params.linkedin }}</span>
+		</a>
+		<a href="https://twitter.com{{ site.Params.twitter }}" class="inline-flex items-center">
+			{{ partial "icon.html" (dict "icon" "x") }}
+			<span class="font-mono">{{ site.Params.twitter }}</span>
+		</a>
+	</div>
+</div>

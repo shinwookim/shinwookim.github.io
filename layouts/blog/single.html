@@ -1,12 +1,6 @@
 {{ define "body" }}
 <header class="mx-auto mb-3">
-	<button
-		id="theme-toggle"
-		aria-label="Toggle dark mode"
-		class="float-end py-2 px-3 text-center sm:text-left"
-	>
-		<span class="fa-solid" id="theme-toggle-content"></span>
-	</button>
+	{{ partial "nav/theme_toggle.html" }}
 </header>
 
 <article	class="prose-custom dark:prose-invert leading-[1.15em]">

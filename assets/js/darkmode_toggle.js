@@ -1,20 +1,20 @@
 const toggleBtn = document.getElementById("theme-toggle");
-const icon = document.getElementById("theme-toggle-content");
+const moon_icon = document.getElementById("theme-toggle-moon");
+const sun_icon = document.getElementById("theme-toggle-sun");
 
 // Load saved theme
 if (localStorage.getItem("theme") === "dark") {
 	document.documentElement.classList.add("dark");
-	icon.classList.add("fa-moon");
+	moon_icon.classList.toggle("hidden");
 } else {
-	icon.classList.add("fa-sun");
+	sun_icon.classList.toggle("hidden");
 }
 
 toggleBtn.addEventListener("click", () => {
 	const isDark = document.documentElement.classList.toggle("dark");
-
 	localStorage.setItem("theme", isDark ? "dark" : "light");
 
 	// Swap icon
-	icon.classList.toggle("fa-sun");
-	icon.classList.toggle("fa-moon");
+	moon_icon.classList.toggle("hidden");
+	sun_icon.classList.toggle("hidden");
 });

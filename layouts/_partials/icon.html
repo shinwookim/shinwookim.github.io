@@ -1,0 +1,8 @@
+{{ $icon := .icon }}
+{{ $class := .class | default "" }}
+{{ $id := .id | default "" }}
+{{ $svg := printf "icons/%s.svg" $icon | resources.Get }}
+
+{{ if $svg }}
+  <span class="icon {{ $class }}" id="{{ $id }}">{{ $svg.Content | safeHTML }}</span>
+{{ end }}

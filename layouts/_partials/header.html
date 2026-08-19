@@ -17,63 +17,12 @@
 
 	<div id="name_and_job">
 		<div class="text-4xl autography">{{ .Site.Title }}</div>
-		<p>
+		<div>
 			{{ .Site.Params.jobTitle | safeHTML }}<br />
 			{{ .Site.Params.company }}
-		</p>
-		<div class="flex flex-col gap-1 mt-3 text-sm">
-			<a href="mailto:{{ .Site.Params.email }}" class="flex items-center gap-2">
-				<i class="fa-solid fa-envelope"></i>
-				<code class="font-mono">{{ .Site.Params.email }}</code>
-			</a>
-			<a href="https://{{ .Site.Params.mastodon.instance }}/@{{ .Site.Params.mastodon.handle }}" class="flex items-center gap-2">
-				<i class="fa-brands fa-mastodon"></i>
-				<code class="font-mono">
-					{{ .Site.Params.mastodon.handle }}@{{.Site.Params.mastodon.instance }}
-				</code>
-			</a>
-			<div class="hidden sm:flex flex-wrap gap-x-4 gap-y-1">
-				<a href="https://keybase.io/{{ .Site.Params.keybase }}" class="flex items-center gap-2">
-					<i class="fa-brands fa-keybase"></i>
-					<code class="font-mono">{{ .Site.Params.keybase }}</code>
-				</a>
-				<a href="https://github.com/{{ .Site.Params.github }}" class="flex items-center gap-2">
-					<i class="fa-brands fa-github"></i>
-					<code class="font-mono">{{ .Site.Params.github }}</code>
-				</a>
-				<a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" class="flex items-center gap-2">
-					<i class="fa-brands fa-linkedin-in"></i>
-					<code class="font-mono">{{ .Site.Params.linkedin }}</code>
-				</a>
-				<a href="https://twitter.com/{{ .Site.Params.twitter }}" class="flex items-center gap-2">
-					<i class="fa-brands fa-x-twitter"></i>
-					<code class="font-mono">{{ .Site.Params.twitter }}</code>
-				</a>
-			</div>
 		</div>
+		{{ partial "nav/socials.html" (dict "class" "hidden sm:flex flex-col gap-1 mt-3 text-sm") }}
 	</div>
+	{{ partial "nav/socials.html" (dict "class" "sm:hidden flex flex-col gap-1 text-sm") }}
 </div>
-
-<!-- Mobile contacts -->
-<div class="sm:hidden mt-4 flex flex-col gap-1 text-sm">
-	<div class="flex flex-wrap gap-x-4 gap-y-1">
-		<a href="https://keybase.io/{{ .Site.Params.keybase }}" class="flex items-center gap-2">
-			<i class="fa-brands fa-keybase"></i>
-			<code class="font-mono">{{ .Site.Params.keybase }}</code>
-		</a>
-		<a href="https://github.com/{{ .Site.Params.github }}" class="flex items-center gap-2">
-			<i class="fa-brands fa-github"></i>
-			<code class="font-mono">{{ .Site.Params.github }}</code>
-		</a>
-		<a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" class="flex items-center gap-2">
-			<i class="fa-brands fa-linkedin-in"></i>
-			<code class="font-mono">{{ .Site.Params.linkedin }}</code>
-		</a>
-		<a href="https://twitter.com/{{ .Site.Params.twitter }}" class="flex items-center gap-2">
-			<i class="fa-brands fa-x-twitter"></i>
-			<code class="font-mono">{{ .Site.Params.twitter }}</code>
-		</a>
-	</div>
-</div>
-
 {{ partial "navbar.html" (dict "menuID" "main" "page" .) }}

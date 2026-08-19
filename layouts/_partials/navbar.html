@@ -11,11 +11,8 @@
 		</button>
     		<ul id="nav-menu" class="hidden sm:w-full sm:flex flex-col sm:flex-row text-center sm:text-left gap-1 sm:gap-6">
     		{{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    		<!-- Right-side button -->
-    		<li class="sm:ml-auto">
-    			<button id="theme-toggle" aria-label="Toggle dark mode" class="py-2 px-3 text-center sm:text-left">
-    				<span class="fa-solid" id="theme-toggle-content"></span>
-    			</button>
+    		<li class="sm:ml-auto sm:flex sm:items-center">
+    			{{ partial "nav/theme_toggle.html" }}
     		</li>
 		</ul>
 	</div>

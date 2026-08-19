@@ -14,4 +14,10 @@
 	.alert-warning {
 		@apply bg-yellow-100 text-yellow-800 border border-yellow-300;
 	}
+	.icon > svg {
+		width: 1.25em;
+		height: 1.25em;
+		vertical-align: -0.125em;
+		fill: currentColor;
+	}
 }

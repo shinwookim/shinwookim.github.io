@@ -23,27 +23,27 @@
 	</div>
 	<ul class="text-end list-none leading-6">
 		<li>
-			<a href="https://keybase.io/{{ .Site.Params.keybase }}" class="no-underline">
-				<i class="fa-brands fa-keybase"></i>
-				<span class="font-mono">{{ .Site.Params.keybase }}</span>
+			<a href="https://keybase.io{{ site.Params.keybase }}" class="no-underline flex text-end flex-row-reverse">
+				<span class="font-mono">{{ site.Params.keybase }}</span>
+				{{ partial "icon.html" (dict "icon" "keybase") }}
 			</a>
 		</li>
 		<li>
-			<a href="https://github.com/{{ .Site.Params.github }}" class="no-underline">
-				<i class="fa-brands fa-github"></i>
-				<span class="font-mono">{{ .Site.Params.github }}</span>
+			<a href="https://github.com{{ site.Params.github }}" class="no-underline flex text-end flex-row-reverse">
+				<span class="font-mono">{{ site.Params.github }}</span>
+				{{ partial "icon.html" (dict "icon" "github") }}
 			</a>
 		</li>
 		<li>
-			<a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" class="no-underline">
-				<i class="fa-brands fa-linkedin-in"></i>
-				<span class="font-mono">{{ .Site.Params.linkedin }}</span>
+			<a href="https://linkedin.com/in{{ site.Params.linkedin }}" class="no-underline flex text-end flex-row-reverse">
+				<span class="font-mono">{{ site.Params.linkedin }}</span>
+				{{ partial "icon.html" (dict "icon" "linkedin") }}
 			</a>
 		</li>
 		<li>
-			<a href="https://twitter.com/{{ .Site.Params.twitter }}" class="no-underline">
-				<i class="fa-brands fa-x-twitter"></i>
-				<span class="font-mono">{{ .Site.Params.twitter }}</span>
+			<a href="https://twitter.com{{ site.Params.twitter }}" class="no-underline flex text-end flex-row-reverse">
+				<span class="font-mono">{{ site.Params.twitter }}</span>
+				{{ partial "icon.html" (dict "icon" "x") }}
 			</a>
 		</li>
 	</ul>
