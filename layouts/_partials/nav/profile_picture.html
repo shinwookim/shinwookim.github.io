@@ -1,0 +1,22 @@
+{{ $class := .class | default "" }}
+{{ $id := .id | default "profile_picture" }}
+{{ $alt := .alt | default "Portrait of Shinwoo Kim" }}
+{{ $imgClass := .img_class | default "" }}
+
+{{ $profile := resources.Get "images/profile.webp" }}
+{{ $small := $profile.Resize "400x" }}
+{{ $medium := $profile.Resize "800x" }}
+{{ $large := $profile.Resize "1200x" }}
+<div {{ if $class }} class="{{$class}}" {{ end }} id="{{$id}}">
+	<img
+		src="{{ $medium.RelPermalink }}"
+		srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w"
+		sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+		{{ if $imgClass }}
+		class="{{$imgClass}}"
+		{{ end }}
+		loading="lazy"
+		decoding="async"
+		alt="{{$alt}}"
+	/>
+</div>
