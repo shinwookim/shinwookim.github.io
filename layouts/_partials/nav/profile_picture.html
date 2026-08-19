@@ -12,11 +12,11 @@
 		src="{{ $medium.RelPermalink }}"
 		srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w"
 		sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
-		{{ if $imgClass }}
-		class="{{$imgClass}}"
-		{{ end }}
-		loading="lazy"
+		{{ with $imgClass }}class="{{ . }}"{{ end }}
 		decoding="async"
+		fetchpriority="high"
 		alt="{{$alt}}"
+		width="{{ $medium.Width }}"
+		height="{{ $medium.Height }}"
 	/>
 </div>
