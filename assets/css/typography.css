@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+
+@font-face {
+  font-family: "autography";
+  font-weight: 400;
+  font-display: swap;
+  src: url("{{ .Autography }}") format("woff");
+}
+.autography {
+  font-family: "Autography";
+  font-weight: normal;
+}

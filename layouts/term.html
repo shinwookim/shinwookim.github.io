@@ -1,18 +1,22 @@
 {{ define "body" }}
-<main class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
-	<h1 class="mb-0">#{{ .Title }}</h1>
+  <main class="prose-custom prose-headings:my-1 prose-headings:mb-0">
+    <h1 class="mb-0">#{{ .Title }}</h1>
     <p class="mt-0">Posts tagged with <i>#{{ .Title }}</i></p>
-	{{ range .Pages }}
-    <div class="flex justify-between items-center">
+    {{ range .Pages }}
+      <div class="flex items-center justify-between">
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         <span class="text-sm text-gray-500">
-            <time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>{{ .Date | time.Format ":date_long" }}</time>
+          <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}"
+            >{{ .Date | time.Format ":date_long" }}</time
+          >
         </span>
-    </div>
+      </div>
     {{ end }}
-    <a class="block text-center text-gray-700" href="{{ "/tags/" | relURL }}">↪ Back to all tags</a>
-</main>
+    <a class="block text-center text-gray-700" href="{{ "/tags/" | relURL }}"
+      >↪ Back to all tags</a
+    >
+  </main>
 
-<footer class="my-3 border-t">{{ partial "footer.html" . }}</footer>
-{{ partial "scripts.html" . }}
+  <footer class="my-3 border-t">{{ partial "footer.html" . }}</footer>
+  {{ partial "scripts.html" . }}
 {{ end }}
