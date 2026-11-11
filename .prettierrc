@@ -1,0 +1,14 @@
+{
+  "plugins": ["prettier-plugin-go-template", "prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./assets/css/main.css",
+  "overrides": [
+    {
+      "files": ["layouts/**/*.html", "*.html"],
+      "options": {
+        "parser": "go-template",
+        "goTemplateBracketSpacing": true,
+        "bracketSameLine": true
+      }
+    }
+  ]
+}
