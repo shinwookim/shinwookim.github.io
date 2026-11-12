@@ -38,7 +38,7 @@ weight = 30
 
 [[menus.main]]
 name = "Connect"
-pageRef = "/connect-with-me"
+pageRef = "/contact"
 weight = 40
 
 [build.buildStats]

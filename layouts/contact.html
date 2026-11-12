@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <section>
+    <h1>{{ .Title }}</h1>
+    <form
+      method="POST"
+      action="https://formspree.io/f/mdegoarz"
+      class="space-y-3">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="name" class="block text-sm font-medium">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            autocomplete="name"
+            placeholder="John Doe"
+            class="block w-full rounded-lg border border-gray-300 p-2 text-sm transition outline-none placeholder:text-gray-400 focus:border-tertiary focus:ring-2 focus:ring-tertiary/20" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            autocomplete="email"
+            placeholder="john@example.com"
+            class="block w-full rounded-lg border border-gray-300 p-2 text-sm transition outline-none placeholder:text-gray-400 focus:border-tertiary focus:ring-2 focus:ring-tertiary/20" />
+        </div>
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          rows="6"
+          required
+          placeholder="Write your message..."
+          class="block w-full resize-y rounded-lg border border-gray-300 p-2 text-sm transition outline-none placeholder:text-gray-400 focus:border-tertiary focus:ring-2 focus:ring-tertiary/20"></textarea>
+      </div>
+      <div class="flex items-center">
+        <button
+          type="submit"
+          class="mx-auto rounded-lg border border-gray-300 p-2 text-sm transition outline-none hover:cursor-pointer hover:border-tertiary hover:text-tertiary focus:border-tertiary focus:ring-2 focus:ring-tertiary/20">
+          Send Message
+          <span aria-hidden="true" class="ml-2">→</span>
+        </button>
+      </div>
+    </form>
+  </section>
+{{ end }}
