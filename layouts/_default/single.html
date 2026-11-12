@@ -1,13 +1,3 @@
-{{ define "body" }}
-<header class="max-w-3xl mx-auto">
-	{{ partial "header.html" . }}
-</header>
-<main class="prose-custom dark:prose-invert">
-	<h1>{{ .Title }}</h1>
-	{{ .Content }}
-</main>
-<footer class="my-3 border-t">
-	{{ partial "footer.html" . }}
-</footer>
-{{ partial "scripts.html" . }}
+{{ define "main" }}
+  {{ .Content }}
 {{ end }}

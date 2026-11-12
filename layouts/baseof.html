@@ -1,10 +1,26 @@
 <!doctype html>
-<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}" class="scroll-smooth">
-	<head>
-		{{ partial "head.html" . }}
-	</head>
-
-	<body class="md:max-w-175 md:mx-auto md:p-4 bg-white text-black dark:bg-[#222] dark:text-white p-3">
-		{{ block "body" . }} {{ end }}
-	</body>
+<html
+  lang="{{ site.Language.Locale }}"
+  dir="{{ or site.Language.Direction `ltr` }}"
+  class="scroll-smooth">
+  <head>
+    {{ partial "head.html" . -}}
+  </head>
+  <body class="bg-white p-3 text-black md:p-4 dark:bg-[#222] dark:text-white">
+    {{- block "body" . }}
+      <header class="md:mx-auto md:mt-2 md:max-w-2xl">
+        {{- partial "header.html" . -}}
+      </header>
+      <main class="prose-custom md:mx-auto md:max-w-2xl">
+        {{ block "main" . }}
+          <h1>{{ .Title }}</h1>
+          {{ .Content }}
+        {{ end }}
+      </main>
+      <footer class="my-3 border-t md:mx-auto md:max-w-2xl">
+        {{ partial "footer.html" . }}
+      </footer>
+      {{ partial "scripts.html" . }}
+    {{ end }}
+  </body>
 </html>

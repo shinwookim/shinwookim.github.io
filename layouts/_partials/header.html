@@ -1,13 +1,27 @@
-<div class="grid grid-cols-2 gap-x-8 items-start">
-	{{ partial "nav/profile_picture.html" (dict "img_class" "rounded-lg object-cover") }}
-	<div id="name_and_job">
-		<div class="text-4xl autography">{{ .Site.Title }}</div>
-		<div>
-			{{ .Site.Params.jobTitle | safeHTML }}<br />
-			{{ .Site.Params.company }}
-		</div>
-		{{ partial "nav/socials.html" (dict "class" "hidden sm:flex flex-col gap-1 mt-3 text-sm") }}
-	</div>
-	{{ partial "nav/socials.html" (dict "class" "sm:hidden flex flex-col gap-1 text-sm") }}
+<!-- Mobile layout -->
+<div class="grid grid-cols-2 items-start gap-4 sm:hidden">
+  <div id="name_and_job">
+    <div class="autography text-end text-3xl">{{ .Site.Title }}</div>
+  </div>
+  <div>
+    {{ .Site.Params.jobTitle | safeHTML }}<br />
+    {{ .Site.Params.company }}
+  </div>
 </div>
-{{ partial "navbar.html" (dict "menuID" "main" "page" .) }}
+<!-- Desktop layout -->
+<div class="hidden items-start justify-center gap-8 sm:flex">
+  {{- partial "nav/profile_picture.html" (dict
+    "img_class" "w-50 h-auto rounded-lg object-cover"
+    )
+  -}}
+  <div id="name_and_job">
+    <div class="autography text-3xl">{{ .Site.Title }}</div>
+    <div>
+      {{ .Site.Params.jobTitle | safeHTML }}<br />
+      {{ .Site.Params.company }}
+    </div>
+    {{- partial "nav/socials.html" (dict "class" "flex flex-col gap-1 mt-3 text-sm") -}}
+  </div>
+</div>
+
+{{ partial "nav/navbar.html" (dict "menuID" "main" "page" .) }}

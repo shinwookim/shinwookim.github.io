@@ -1,0 +1,61 @@
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  <nav class="my-2 border-y">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+      <!-- Mobile toggle -->
+      <button
+        id="nav-toggle"
+        class="w-full cursor-pointer py-2 text-center sm:hidden"
+        aria-label="Toggle navigation">
+        ☰
+      </button>
+      <ul
+        id="nav-menu"
+        class="hidden flex-col gap-1 text-center sm:flex sm:w-full sm:flex-row sm:gap-6 sm:text-left">
+        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        <li class="sm:ml-auto sm:flex sm:items-center">
+          {{ partial "nav/theme_toggle.html" }}
+        </li>
+      </ul>
+    </div>
+  </nav>
+{{- end }}
+
+{{- define "_partials/inline/menu/walk.html" -}}
+  {{- $navBaseClass := "block p-2 hover:underline [text-underline-position:under]" -}}
+  {{- $page := .page -}}
+
+  {{- range .menuEntries -}}
+    {{- $attrs := dict "href" .URL "class" $navBaseClass -}}
+
+    {{- if $page.IsMenuCurrent .Menu . -}}
+      {{- $attrs = merge $attrs (dict "class" (printf "%s underline font-bold" $navBaseClass) "aria-current" "page") -}}
+    {{- else if $page.HasMenuCurrent .Menu . -}}
+      {{- $attrs = merge $attrs (dict "class" (printf "%s underline" $navBaseClass) "aria-current" "true") -}}
+    {{- end -}}
+
+    {{- $name := .Name -}}
+    {{- with .Identifier -}}
+      {{- with T . -}}
+        {{- $name = . -}}
+      {{- end -}}
+    {{- end -}}
+    <li>
+      <a
+        {{- range $k, $v := $attrs -}}
+          {{- with $v -}}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+          {{- end -}}
+        {{- end -}}
+        >{{ $name }}</a
+      >
+      {{- with .Children -}}
+        <ul class="ml-4">
+          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
+        </ul>
+      {{- end -}}
+    </li>
+  {{- end -}}
+{{- end -}}
