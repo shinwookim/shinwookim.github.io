@@ -1,34 +1,42 @@
-- company: "[Republic of Korea Army](https://www.army.mil.kr)"
-  title: "Technology/Infrastructure Specialist (Enlisted)"
+- company:
+    name: Republic of Korea Army
+    additional_info: Dispatched to Defense Intelligence Command (under Ministry of Defense)
+  title: IT Infrastructure Specialist (Sergeant)
   start_year: 2025
   end_year: 2026
 
-- company: "[University of Pittsburgh (SCI)](https://www.cs.pitt.edu/)"
-  title: "Part-Time Instructor/Teaching Assistant"
+- company:
+    name: University of Pittsburgh (CS Dept.)
+  title: Part-Time Instructor/Teaching Assistant
   start_year: 2021
   end_year: 2024
 
-- company: "[Ansys Inc. (Digital Twin Team)](https://www.ansys.com/products/digital-twin)"
-  title: "Software Engineering Intern"
+- company:
+    name: Ansys Inc. (Digital Twins Team)
+  title: Software Engineering Intern
   start_year: 2024
   end_year: 2024
 
-- company: "[University of Pittsburgh](https://www.sci.pitt.edu/)"
-  title: "Graduate Student"
+- company:
+    name: University of Pittsburgh
+  title: Graduate Student
   start_year: 2023
   end_year: 2024
 
-- company: "[University of Pittsburgh (Admissions)](https://admissions.pitt.edu/dreamteam/)"
-  title: "Diversity Recruitment Educator"
+- company:
+    name: University of Pittsburgh (Admissions Office)
+  title: Diversity Recruitment Educator
   start_year: 2021
   end_year: 2022
 
-- company: "[University of Pittsburgh (Honors College)](https://www.frederickhonors.pitt.edu/)"
-  title: "STEM Ambassador Fellow"
+- company:
+    name: University of Pittsburgh (Honors College)
+  title: STEM Ambassador Fellow
   start_year: 2021
   end_year: 2022
 
-- company: "[University of Pittsburgh](https://www.sci.pitt.edu/)"
-  title: "Undergraduate Student"
+- company:
+    name: University of Pittsburgh
+  title: Undergraduate Student
   start_year: 2021
   end_year: 2023

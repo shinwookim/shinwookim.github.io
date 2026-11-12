@@ -1,0 +1,52 @@
+{{ define "main" }}
+  {{ .Content }}
+  <section>
+    <h2>Experience</h2>
+    {{ range hugo.Data.experience }}
+      <div class="gap-x-3 md:grid md:grid-cols-6">
+        <div class="font-bold md:col-span-1 md:text-right">
+          {{ if eq .start_year .end_year }}
+            {{ .start_year }}.
+          {{ else }}
+            {{ .start_year }} – {{ .end_year }}.
+          {{ end }}
+        </div>
+        <div markdown="1" class="*:my-0 md:col-span-5">
+          {{ .title }},
+          {{ if .company.additional_info }}
+            <abbr
+              title=" {{ .company.additional_info }}"
+              class="group relative cursor-help underline decoration-dotted underline-offset-4">
+              {{ .company.name }}
+              <span
+                class="invisible absolute bottom-full left-1/2 z-50 -translate-x-1/2 rounded bg-gray-800 px-3 py-1.5 text-xs whitespace-nowrap text-white opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100">
+                {{ .company.additional_info }}
+              </span>
+            </abbr>
+          {{ else }}
+            {{ .company.name }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </section>
+  <section>
+    <h2>Education</h2>
+    <ul class="px-0">
+      <li class="mb-2 flex gap-x-2">
+        {{ partial "icon.html" (dict "icon" "grad_cap") }}
+        <div class="leading-tight">
+          M.S., Computer Science, 2024<br />
+          University of Pittsburgh
+        </div>
+      </li>
+      <li class="mb-2 flex gap-x-2">
+        {{ partial "icon.html" (dict "icon" "grad_cap") }}
+        <div class="leading-tight">
+          B.S., Computer Science, 2023<br />
+          University of Pittsburgh
+        </div>
+      </li>
+    </ul>
+  </section>
+{{ end }}

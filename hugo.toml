@@ -5,12 +5,9 @@ title = "Shinwoo Kim"
 [params]
 author = "Shinwoo Kim"
 email = "shinwookim@proton.me"
-description = "I am a software developer based in Pittsburgh who is interested in computer architecture, distributed/operating systems, and compilers."
-jobTitle = """
-<s>Software Engineer</s><br /><a
-    href="https://en.wikipedia.org/wiki/Conscription_in_South_Korea">Enlisted
-    Soldier</a>"""
-company = "Republic of Korea Army"
+description = "I am a software developer interested in computer architecture, distributed/operating systems, and compilers."
+jobTitle = "Software Engineer"
+# company = ""
 twitter = "_shinwookim"
 github = "shinwookim"
 linkedin = "kimshinwoo"
