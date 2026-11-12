@@ -1,9 +1,8 @@
-{{ $bundle := slice
-    (resources.Get "js/nav_toggle.js")
-    (resources.Get "js/darkmode_toggle.js")
-    | resources.Concat "js/bundle.js"
-    | minify
-    | fingerprint
-}}
-
+{{- $bundle := slice
+  (resources.Get "js/nav_toggle.js")
+  (resources.Get "js/darkmode_toggle.js")
+  | resources.Concat "js/bundle.js"
+  | minify
+  | fingerprint
+-}}
 <script src="{{ $bundle.RelPermalink }}"></script>

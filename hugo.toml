@@ -64,11 +64,11 @@ target = "assets/notwatching/hugo_stats.json"
 
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-    [markup.goldmark.extensions]
-      attr = true
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.extensions]
+attr = true
 
 [caches]
 [caches.images]
@@ -83,5 +83,12 @@ dir = ':cacheDir/images'
 	tags = "/blog/tags/:slug/"
 
 [security]
-  [security.exec]
-    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+[security.exec]
+allow = [
+    '^(dart-)?sass$',
+    '^go$',
+    '^git$',
+    '^node$',
+    '^postcss$',
+    '^tailwindcss$',
+]

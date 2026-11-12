@@ -1,13 +1,16 @@
-<div class="mt-3 flex flex-wrap justify-between items-center">
-	<div>
-		<a 	class="no-underline autography text-4xl mt-5" href="{{ .Site.Home.RelPermalink }}">
-				{{ .Site.Title }}</a
-		>
-	</div>
-	<div class="prose dark:prose-invert">
-		<span>
-			&copy; 2020-{{ now.Year }}
-			<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.author }}</a>, All Rights Reserved.
-		</span>
-	</div>
+<div class="items-center text-center sm:flex sm:justify-between">
+  <div class="mt-3 hidden sm:block">
+    <a
+      class="autography text-3xl no-underline"
+      href="{{ .Site.Home.RelPermalink }}">
+      {{ .Site.Title }}
+    </a>
+  </div>
+  <div class="prose-custom">
+    <span>
+      &copy;
+      2020-{{ now.Year }}
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.author }}</a>
+    </span>
+  </div>
 </div>

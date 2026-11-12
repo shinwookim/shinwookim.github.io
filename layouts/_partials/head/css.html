@@ -1,5 +1,9 @@
 {{- with resources.Get "fonts/autography.woff2" | fingerprint -}}
-{{- with resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.css" (dict "Autography" .RelPermalink) | css.TailwindCSS | minify | fingerprint -}}
-<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"/>
-{{- end -}}
+  {{- with resources.Get "css/main.css" | css.TailwindCSS | resources.ExecuteAsTemplate "css/main.css" (dict "Autography" .RelPermalink) | minify | fingerprint -}}
+    <link
+      rel="stylesheet"
+      href="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+      crossorigin="anonymous" />
+  {{- end -}}
 {{- end -}}
