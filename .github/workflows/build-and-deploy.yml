@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+    types:
+      - resume_updated
   workflow_dispatch:
 permissions:
   contents: read
@@ -38,6 +41,20 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
+      - name: Download latest resume
+        env:
+          GH_TOKEN: ${{ secrets.RESUME_REPO_TOKEN || github.token }}
+        run: |
+          mkdir -p static/files
+
+          gh release download \
+            --repo shinwookim/resume \
+            --pattern "main.pdf" \
+            --dir static/files
+
+          mv static/files/main.pdf \
+            static/files/shinwoo_kim_resume.pdf
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6

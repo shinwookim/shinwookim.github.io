@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <div class="space-y-4">
+    <div class="mb-0 flex items-center justify-between">
+      <h1>{{ .Title }}</h1>
+      <a
+        href="{{ "assets/files/shinwoo_kim_resume.pdf" | relURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden rounded-lg border px-1 no-underline transition hover:border-tertiary hover:text-tertiary focus:border-tertiary focus:ring-2 focus:ring-tertiary/20 md:block">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        Open PDF &nearr;
+      </a>
+    </div>
+
+    <!-- Desktop PDF preview -->
+    <iframe
+      src="{{ "assets/files/shinwoo_kim_resume.pdf" | relURL }}"
+      class="hidden aspect-8.5/11 w-full rounded-lg md:block"
+      title="Resume PDF"></iframe>
+
+    <!-- Mobile fallback -->
+    <div class="rounded-lg border border-gray-400 p-6 text-center md:hidden">
+      <h2 class="mt-3">View my Résumé</h2>
+      <p>
+        Open the PDF in your browser's document viewer.<br />
+        <a
+          href="{{ "assets/files/shinwoo_kim_resume.pdf" | relURL }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-block rounded-lg border px-2 py-1 no-underline transition hover:border-tertiary hover:text-tertiary focus:border-tertiary focus:ring-2 focus:ring-tertiary/20">
+          View Resume &nearr;
+        </a>
+      </p>
+    </div>
+  </div>
+{{ end }}
