@@ -1,32 +1,43 @@
+{{ define "main" }}
+  <article>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    <h1 class="my-0 font-sc text-4xl font-normal">
+      {{ .Title | markdownify }}
+    </h1>
+    {{- if .Params.Subtitle -}}
+      <p class="mt-0 mb-0 font-serif text-lg">
+        {{ .Params.Subtitle }}
+      </p>
+    {{- end -}}
+    <time
+      class="font-serif"
+      datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}">
+      {{ .Date.Format "2006. 01. 02. 15:04" }}
+    </time>
+    <div
+      class="font-serif prose-headings:font-normal prose-h2:font-sc prose-h2:tracking-[0.125em] prose-h3:italic prose-th:font-bold">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
+
 {{ define "body" }}
-<header class="mx-auto mb-3">
-	{{ partial "nav/theme_toggle.html" }}
-</header>
-
-<article	class="prose-custom dark:prose-invert leading-[1.15em]">
-	{{ block "main" . }} {{ end }}
-</article>
-
-<footer class="my-3 border-t">{{ partial "footer.html" . }}</footer>
-{{ partial "scripts.html" . }} {{ end }} {{ define "main" }}
-<div class="flex min-h-screen pt-30 lg:px-30">
-	<aside class="flex-2 hidden md:block">
-		{{ partial "blog/sidebar.html" . }}
-	</aside>
-	<main class="flex-4 p-6">
-		<div class="max-w-2xl">
-			{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-			<h1 class="font-bold my-0">{{ .Title }}</h1>
-			{{- if .Params.Subtitle -}}
-			<p class="text-lg mt-0 mb-0">{{ .Params.Subtitle }}</p>
-			{{- end -}}
-			<time class="text-sm" datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
-				{{ .Date.Format "2006. 01. 02. 15:04" }}
-			</time>
-			{{ .Content }}
-			{{ partial "blog/post-table.html" . }}
-			{{ partial "blog/namecard.html" . }}
-		</div>
-	</main>
-</div>
+  <div class="text-end">
+    {{ partial "nav/theme_toggle.html" }}
+  </div>
+  <div class="mx-auto flex flex-wrap gap-x-6 leading-[1.15em] 2xl:max-w-5xl">
+    <aside class="hidden xl:block">
+      {{ partial "blog/sidebar.html" . }}
+    </aside>
+    <main
+      class="prose-custom max-w-full min-w-0 flex-1 md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
+      {{ block "main" . }}
+      {{ end }}
+      {{ partial "blog/post-table.html" . }}
+    </main>
+  </div>
+  <footer class="my-3 border-t">
+    {{ partial "footer.html" . }}
+  </footer>
+  {{ partial "scripts.html" . }}
 {{ end }}

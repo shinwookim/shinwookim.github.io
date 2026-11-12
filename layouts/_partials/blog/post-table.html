@@ -1,21 +1,45 @@
-<div class="border border-gray-300 px-6 py-3 mb-5 not-prose">
-	<p class="font-bold mb-2 border-b border-gray-300">Other Posts / 다른 글</p>
-	<div>
-		<table class="w-full border-none">
-			<tbody>
-				{{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
-				<tr class="prose-custom dark:prose-invert text-sm">
-					<td>
-						<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-					</td>
-					<td class="w-40 text-right">
-						<time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
-							{{ .Date.Format "2006.01.02." }}
-						</time>
-					</td>
-				</tr>
-				{{ end }}
-			</tbody>
-		</table>
-	</div>
+<div class="not-prose mt-3 mb-5 border border-gray-300 px-6 py-3">
+  <div class="mb-2 flex justify-between border-b border-gray-300 pb-1">
+    <p class="font-bold">Other Posts</p>
+    {{ with site.GetPage "blog" }}
+      {{ with .OutputFormats.Get "rss" }}
+        <a
+          href="{{ .RelPermalink }}"
+          aria-label="RSS Feed"
+          class="inline-flex items-center border px-0.5 text-xs font-medium transition hover:text-gray-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-3.5"
+            aria-hidden="true">
+            <path
+              d="M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-2 8v4a6 6 0 0 1 6 6h4c0-5.523-4.477-10-10-10Zm0-6v4c6.627 0 12 5.373 12 12h4C19 11.268 11.732 4 3 4Z" />
+          </svg>
+          RSS
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+  <div>
+    <table class="w-full border-none">
+      <tbody>
+        {{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+          <tr class="prose-custom text-sm">
+            <td>
+              <a class="hover:text-gray-400" href="{{ .RelPermalink }}"
+                >{{ .Title }}</a
+              >
+            </td>
+            <td class="w-40 text-right">
+              <time
+                datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}">
+                {{ .Date.Format "2006.01.02." }}
+              </time>
+            </td>
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
 </div>

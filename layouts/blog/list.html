@@ -1,19 +1,50 @@
+{{ define "main" }}
+  <div class="grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-3">
+    {{ range .Pages }}
+      {{ $cover := .Resources.GetMatch (.Params.cover.image | default "cover.*") }}
+      <div
+        class="group {{ with $cover }}
+          before:absolute before:content-[''] before:inset-0 before:-z-10
+          before:bg-cover before:bg-center before:opacity-30
+          before:bg-[url('{{ .RelPermalink }}')]
+        {{ end }} relative isolate flex flex-col overflow-hidden border shadow-sm transition duration-350 hover:bg-black dark:hover:bg-black">
+        <a
+          href="{{ .RelPermalink }}"
+          class="leading-none no-underline group-hover:text-white dark:group-hover:text-white">
+          <div class="flex min-h-50 flex-col justify-between px-3 py-1">
+            <div>
+              <time
+                class="relative font-gill-sans text-sm after:absolute after:top-0 after:left-0 after:z-0 after:mt-5 after:h-1.5 after:w-6.75 after:bg-black after:content-[''] group-hover:after:bg-white dark:after:bg-white dark:group-hover:after:bg-black"
+                datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}">
+                {{ .Date | time.Format ":date_long" }}
+              </time>
+            </div>
+            <span class="font-bold">{{ .Title | strings.Truncate 100 }}</span>
+          </div>
+        </a>
+        <div class="px-3 group-hover:text-white dark:group-hover:text-black">
+          {{ range (.GetTerms "tags") }}
+            <a class="px-1 text-xs no-underline" href="{{ .RelPermalink }}">
+              #{{ .LinkTitle }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
 {{ define "body" }}
-<div class="md:max-w-175 md:mx-auto md:p-4 bg-white text-black dark:bg-[#222] dark:text-white p-3">
-	<header class="max-w-3xl mx-auto">{{ partial "header.html" . }}</header>
-	<main class="prose prose-custom dark:prose-invert max-w-none prose-headings:mb-0 prose-headings:my-1">
-		<h1>{{ .Title }}</h1>
-		{{ range .Pages }}
-		<div class="flex justify-between items-center">
-			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-			<span class="text-sm text-gray-500">
-				<time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
-					{{ .Date | time.Format ":date_long" }}
-				</time>
-			</span>
-		</div>
-		{{ end }}
-	</main>
-	<footer class="my-3 border-t">{{ partial "footer.html" . }}</footer>
-</div>
-{{ partial "scripts.html" . }} {{ end }}
+  <header class="md:mx-auto md:mt-2 md:max-w-175">
+    {{ partial "header.html" . }}
+  </header>
+  <main class="prose-custom md:mx-auto md:max-w-175">
+    <h1>{{ .Title }}</h1>
+    {{ block "main" . }}
+    {{ end }}
+  </main>
+  <footer class="my-3 border-t md:mx-auto md:max-w-175">
+    {{ partial "footer.html" . }}
+  </footer>
+  {{ partial "scripts.html" . }}
+{{ end }}

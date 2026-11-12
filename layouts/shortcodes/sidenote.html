@@ -1,0 +1,24 @@
+{{- $id := add .Ordinal 1 -}}
+<span class="group not-prose inline">
+  <a id="sn-ref:{{ $id }}" href="#sn:{{ $id }}">
+    {{- if .Get 0 -}}
+      <span
+        class="underline decoration-orange decoration-dashed transition duration-600 md:group-hover:bg-orange-200 md:group-hover:no-underline dark:md:group-hover:bg-orange-900">
+        {{- .Get 0 -}}
+      </span>
+    {{- end -}}
+    <sup class="hidden p-0 text-xs text-orange no-underline md:inline">
+      [{{- $id -}}]
+    </sup>
+  </a>
+  <a
+    id="sn:{{ $id }}"
+    href="#sn-ref:{{ $id }}"
+    role="sidenote"
+    class="float-none my-2 ml-4 block w-auto grid-cols-[auto_1fr] gap-x-1 border-l-2 border-solid pl-3 text-xs group-hover:border-orange md:relative md:float-right md:clear-right md:mr-[-35%] md:inline-grid md:w-[30%] md:border md:border-transparent md:group-hover:border-dashed dark:group-hover:border-orange-800">
+    <span class="hidden text-orange md:inline">[{{- $id -}}]</span>
+    <span>
+      {{- .Inner | markdownify -}}
+    </span>
+  </a>
+</span>

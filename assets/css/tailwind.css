@@ -6,9 +6,11 @@
 @theme {
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "Intel One Mono", monospace;
-
+  --font-serif: "Alegreya", "Nanum Myeongjo", serif;
+  --font-sc: "Alegreya SC", "Nanum Myeongjo", serif;
+  --font-gill-sans: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   --color-primary: #000000;
-  --color-secondary: #ffffff;
+  --color-secondary: fffff8;
   --color-tertiary: oklch(70.7% 0.022 261.325);
 
   --color-blue: #164273;
@@ -73,9 +75,10 @@
   @apply prose-h3:my-1 prose-h3:text-xl prose-h3:font-semibold;
   @apply prose-h4:my-1 prose-h4:text-lg prose-h4:font-semibold;
   @apply prose-a:underline-offset-4 prose-a:hover:text-tertiary;
+  @apply prose-p:leading-6;
 
   @apply prose-table:border-t-2 prose-table:border-b-2;
-  @apply prose-thead:border-b-2 prose-thead:bg-gray-300 dark:prose-thead:bg-gray-500;
+  @apply prose-thead:border-b-2 prose-thead:font-gill-sans;
 
   @apply prose-ol:my-0 prose-ul:my-0 prose-li:my-0 [&_p:has(+ol)]:mb-0 [&_p:has(+ul)]:mb-0;
 }

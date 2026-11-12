@@ -1,34 +1,52 @@
 <div>
-	{{ partial "nav/profile_picture.html" (dict "class" "justify-end flex" "img_class" "object-cover headshot float-md-end w-50 h-50 rounded-lg mb-1") }}
-	<div class="text-end mt-5">
-		<a class="no-underline autography text-3xl mt-5 text-end" href="{{ .Site.Home.RelPermalink }}">
-			{{ .Site.Title }}
-		</a>
-	</div>
-	<ul class="text-end list-none leading-6">
-		<li>
-			<a href="https://keybase.io{{ site.Params.keybase }}" class="no-underline flex text-end flex-row-reverse">
-				<span class="font-mono">{{ site.Params.keybase }}</span>
-				{{ partial "icon.html" (dict "icon" "keybase") }}
-			</a>
-		</li>
-		<li>
-			<a href="https://github.com{{ site.Params.github }}" class="no-underline flex text-end flex-row-reverse">
-				<span class="font-mono">{{ site.Params.github }}</span>
-				{{ partial "icon.html" (dict "icon" "github") }}
-			</a>
-		</li>
-		<li>
-			<a href="https://linkedin.com/in{{ site.Params.linkedin }}" class="no-underline flex text-end flex-row-reverse">
-				<span class="font-mono">{{ site.Params.linkedin }}</span>
-				{{ partial "icon.html" (dict "icon" "linkedin") }}
-			</a>
-		</li>
-		<li>
-			<a href="https://twitter.com{{ site.Params.twitter }}" class="no-underline flex text-end flex-row-reverse">
-				<span class="font-mono">{{ site.Params.twitter }}</span>
-				{{ partial "icon.html" (dict "icon" "x") }}
-			</a>
-		</li>
-	</ul>
+  {{ partial "nav/profile_picture.html" (dict "class" "justify-end flex" "img_class" "object-cover headshot float-md-end w-50 h-50 rounded-lg mb-1") }}
+  <div class="mt-5 text-end">
+    <a
+      class="autography mt-5 text-end text-3xl no-underline"
+      href="{{ .Site.Home.RelPermalink }}">
+      {{ .Site.Title }}
+    </a>
+  </div>
+  <ul class="list-none text-end leading-6">
+    <li>
+      <a
+        href="https://keybase.io{{ site.Params.keybase }}"
+        class="flex flex-row-reverse text-end no-underline">
+        <span class="font-mono text-sm hover:text-gray-400"
+          >{{ site.Params.keybase }}</span
+        >
+        {{ partial "icon.html" (dict "icon" "keybase") }}
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com{{ site.Params.github }}"
+        class="flex flex-row-reverse text-end no-underline">
+        <span class="font-mono text-sm hover:text-gray-400"
+          >{{ site.Params.github }}</span
+        >
+        {{ partial "icon.html" (dict "icon" "github") }}
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://linkedin.com/in{{ site.Params.linkedin }}"
+        class="flex flex-row-reverse text-end no-underline">
+        <span class="font-mono text-sm hover:text-gray-400"
+          >{{ site.Params.linkedin }}</span
+        >
+        {{ partial "icon.html" (dict "icon" "linkedin") }}
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://twitter.com{{ site.Params.twitter }}"
+        class="flex flex-row-reverse text-end no-underline">
+        <span class="font-mono text-sm hover:text-gray-400"
+          >{{ site.Params.twitter }}</span
+        >
+        {{ partial "icon.html" (dict "icon" "x") }}
+      </a>
+    </li>
+  </ul>
 </div>

@@ -1,22 +1,31 @@
-{{ define "body" }}
-  <main class="prose-custom prose-headings:my-1 prose-headings:mb-0">
-    <h1 class="mb-0">#{{ .Title }}</h1>
-    <p class="mt-0">Posts tagged with <i>#{{ .Title }}</i></p>
-    {{ range .Pages }}
-      <div class="flex items-center justify-between">
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-        <span class="text-sm text-gray-500">
-          <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}"
-            >{{ .Date | time.Format ":date_long" }}</time
-          >
-        </span>
-      </div>
+{{ define "main" }}
+  <h1 class="mb-0">Posts</h1>
+  <p class="mt-0">Posts tagged with <i>#{{ .Title }}</i></p>
+  {{ range .Pages }}
+    <div class="mb-5 flex flex-col">
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <span class="text-sm text-gray-500">
+        <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}"
+          >{{ .Date | time.Format ":date_long" }}</time
+        >
+      </span>
+    </div>
+  {{ end }}
+  <div class="flex justify-center gap-5">
+    {{ with .Parent }}
+      <a
+        class="border px-3 py-1 text-sm no-underline"
+        href="{{ .RelPermalink }}">
+        ↪ Back to all tags
+      </a>
     {{ end }}
-    <a class="block text-center text-gray-700" href="{{ "/tags/" | relURL }}"
-      >↪ Back to all tags</a
-    >
-  </main>
-
-  <footer class="my-3 border-t">{{ partial "footer.html" . }}</footer>
-  {{ partial "scripts.html" . }}
+    {{ $mainSection := index site.Params.mainSections 0 | default "posts" }}
+    {{ with site.GetPage $mainSection }}
+      <a
+        class="border px-3 py-1 text-sm no-underline"
+        href="{{ .RelPermalink }}">
+        ↪ Back to all posts
+      </a>
+    {{ end }}
+  </div>
 {{ end }}

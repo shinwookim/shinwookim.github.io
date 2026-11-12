@@ -1,5 +1,5 @@
 baseURL = "https://shinwookim.github.io/"
-locale = "en-US"
+languageCode  = "en-US"
 title = "Shinwoo Kim"
 
 [params]
@@ -71,14 +71,16 @@ target = "assets/notwatching/hugo_stats.json"
       attr = true
 
 [caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+[caches.images]
+dir = ':cacheDir/images'
 
-[outputs]
-home = ['html']
-section = ['html']
-taxonomy = ['html']
-term = ['html']
+[taxonomies]
+	tag = "tags"
+
+[permalinks.taxonomy]
+	tags = "/blog/tags/"
+[permalinks.term]
+	tags = "/blog/tags/:slug/"
 
 [security]
   [security.exec]
